@@ -1,2 +1,1 @@
-recursive-include score_card/mongo/resoure *
-recursive-include score_card/config/score-card *
+recursive-include get_user_info/connect_database *
