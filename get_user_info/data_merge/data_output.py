@@ -26,7 +26,7 @@ def out_put_run():
     #for item in mongo_lrds.find({'crtTime':{'$gte':datetime(2017,1,1)}}):
     #for item in collection.find({'loanApplyInfo.data.partyId':{'$in':partyid_list}}):
     #for item in mongo_lrds.find().sort('crtTime',-1).limit(10):
-    for item in mongo_lrds.find():
+    for item in mongo_lrds.find(no_cursor_timeout=True):
         merge_dict=data_merge(item)
         if merge_dict=='None':
             continue
