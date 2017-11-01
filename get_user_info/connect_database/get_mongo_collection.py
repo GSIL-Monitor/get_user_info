@@ -10,7 +10,7 @@ from get_user_info.config import init_app
 def get_lrds_maindoc():
     init_app()
 
-    mongodb_path_lrds = bootstrap.ti_config_service.get_value('get_user_info.mongodb_path_lrds', default='/Users/andpay/PycharmProjects/get_user_info/ac_lrds_db')
+    mongodb_path_lrds = bootstrap.ti_config_service.get_value('get_user_info.mongodb_path_lrds', default='/db/mongodb/ac_lrds_db')
     mongodb_name_lrds = bootstrap.ti_config_service.get_value('get_user_info.mongodb_name_lrds', default='ac_lrds_db')
     #print(mongodb_path_lrds)
     db = MongoTemplate.get_database(mongodb_path_lrds, mongodb_name_lrds)
