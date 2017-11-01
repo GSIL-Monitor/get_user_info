@@ -5,10 +5,13 @@ from get_user_info.data_from_mongo import dict_parse
 from get_user_info.connect_database import get_mongo_collection
 import pandas as pd
 import datetime as dt
+import os
 
 class mongo_basicinfo():
 
-    city_file=pd.read_excel('/Users/andpay/PycharmProjects/get_user_info/get_user_info/connect_database/city.xlsx')
+    path=os.path.dirname(__file__)
+    path=path+'/city.xlsx'
+    city_file=pd.read_excel(path)
 
     def get_age(self,data):
         key_list = ['loanApplyInfo', 'data', 'certNo']
