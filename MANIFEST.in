@@ -1,0 +1,2 @@
+recursive-include score_card/mongo/resoure *
+recursive-include score_card/config/score-card *
