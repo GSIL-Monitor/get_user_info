@@ -36,13 +36,13 @@ def get_cif_M2():
 
     sql='''   select distinct partyid,
               case when y.pid is not null then 'M2' else 'NM' end categroy
-              from  dev_db.f_loanagreement x
+              from  dev_dw.f_loanagreement x
               left join 
               (
-                select distinct a.partyid pid from  dev_db.f_loanagreement a
+                select distinct a.partyid pid from  dev_dw.f_loanagreement a
                 left join  dev_dw.f_loanrepayschedule b
                 on a.id=b.idloanagreement
-                where b.repaytime-b.duedate>33 or (b.repaytime is null and sysdate()-b.duedate>33)
+                where b.repaytime-b.duedate>33 or (b.repaytime is null and sysdate-b.duedate>33)
               )y
               on x.partyid=y.pid
               where loantime<to_date('2017-09-01','yyyy-mm-dd') '''
