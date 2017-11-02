@@ -6,11 +6,13 @@ from get_user_info.config import init_app
 from ti_daf import SqlTemplate,sql_util
 import pandas as pd
 from datetime import datetime
-
+import logging
+import time
 
 def get_psns_call():
 
     init_app()
+
     sql = 'select  a.partyid,count(distinct b.idcallee) count_contact from Caller a left join Callee b ' \
           'on a.idcaller=b.idcaller' \
           ' group by a.partyid'
@@ -29,6 +31,8 @@ def get_psns_call():
 def get_cif_M2():
 
     init_app()
+    logger = logging.getLogger(__name__)
+    starttime=time.time()
 
     sql='''   select distinct partyid,
               case when y.pid is not null then 'M2' else 'NM' end categroy
@@ -44,6 +48,10 @@ def get_cif_M2():
               where loantime<'2017-09-01' '''
 
     sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/mysql/ac_cif_db')
+
+    endtime=time.time()
+
+    logger.info('end of query data fromTime=[%s], toTime=[%s].' % (starttime, endtime))
 
     partyid_list=[]
     for row in sql_row:

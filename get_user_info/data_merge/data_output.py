@@ -15,16 +15,16 @@ from get_user_info.config import init_app
 def out_put_run():
 
     init_app()
-
     logger = logging.getLogger(__name__)
 
     startime=time.time()
+    logger.info('to get m2_df begin')
 
     m2_df=get_cif_M2()
 
     middle_time_1=time.time()
 
-    logger.debug('get m2_df')
+    logger.info('get mongodb data, fromTime=[%s], toTime=[%s].' % (startime, middle_time_1))
 
     mongo_lrds=get_lrds_maindoc()
 
