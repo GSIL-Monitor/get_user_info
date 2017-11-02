@@ -36,26 +36,25 @@ def get_cif_M2():
 
     sql='''   select distinct partyid,
               case when y.pid is not null then 'M2' else 'NM' end categroy
-              from  ac_cif_db.LoanAgreement x
+              from  dev_db.f_loanagreement x
               left join 
               (
-                select distinct a.partyid pid from  ac_cif_db.LoanAgreement a
-                left join  ac_las_db.LoanRepaySchedule b
+                select distinct a.partyid pid from  dev_db.f_loanagreement a
+                left join  dev_dw.f_loanrepayschedule b
                 on a.id=b.idloanagreement
                 where b.repaytime-b.duedate>33 or (b.repaytime is null and sysdate()-b.duedate>33)
               )y
               on x.partyid=y.pid
               where loantime<'2017-09-01' '''
 
-    sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/mysql/ac_cif_db')
-
-    endtime=time.time()
-
-    logger.info('end of query data fromTime=[%s], toTime=[%s].' % (starttime, endtime))
+    sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/oracle/dev_dw_db')
 
     partyid_list=[]
     for row in sql_row:
         partyid_list.append(list(row))
+
+    endtime = time.time()
+    logger.info('end of query data fromTime=[%s], toTime=[%s].' % (starttime, endtime))
 
     partyid_df=pd.DataFrame(partyid_list,columns=['partyid','status'])
 
@@ -66,12 +65,12 @@ def get_cif_loantime():
     init_app()
 
     sql='''
-    select  partyid,max(loantime)  from ac_cif_db.LoanAgreement 
+    select  partyid,max(loantime)  from dev_db.f_loanagreement 
     where loanstatus in ('D','O','R','E')
     group by partyid
     '''
 
-    sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/mysql/ac_cif_db')
+    sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/oracle/dev_dw_db')
 
     loantime_list=[]
     for row in sql_row:
