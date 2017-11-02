@@ -36,8 +36,8 @@ def out_put_run():
     result_list = []
     #for item in mongo_lrds.find({'crtTime':{'$gte':datetime(2017,1,1)}}):
     #for item in collection.find({'loanApplyInfo.data.partyId':{'$in':partyid_list}}):
-    for item in mongo_lrds.find().sort('crtTime',-1).limit(10):
-    #for item in mongo_lrds.find(no_cursor_timeout=True):
+    #for item in mongo_lrds.find().sort('crtTime',-1).limit(10):
+    for item in mongo_lrds.find(no_cursor_timeout=True):
         merge_dict=data_merge(item)
         if merge_dict=='None':
             continue
@@ -73,14 +73,14 @@ def out_put_run():
 def email_task():
 
     score_df=out_put_run()
-    excel_writer=pd.ExcelWriter('/home/andpay/data/excel/score_card.xlsx',engine='xlsxwriter')
+    excel_writer=pd.ExcelWriter('/home/andpay/data/excel/get_user_info.xlsx',engine='xlsxwriter')
     score_df.to_excel(excel_writer,index=False)
     excel_writer.save()
 
-    subject = 'score_card'
+    subject = 'get_user_info'
     to_addrs = ['kesheng.wang@andpay.me']
-    body_text = 'daily_report'
-    attachment_file = "/home/andpay/data/excel/score_card.xlsx"
+    body_text = 'get_user_info'
+    attachment_file = "/home/andpay/data/excel/get_user_info.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
 
