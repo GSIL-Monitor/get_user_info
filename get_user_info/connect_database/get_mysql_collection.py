@@ -63,6 +63,8 @@ def get_cif_M2():
 
 def get_cif_loantime():
     init_app()
+    logger = logging.getLogger(__name__)
+    starttime = time.time()
 
     sql='''
     select  partyid,max(loantime)  from dev_db.f_loanagreement 
@@ -78,13 +80,17 @@ def get_cif_loantime():
 
     loantime_df=pd.DataFrame(loantime_list,columns=['partyid','loantime'])
 
+    endtime = time.time()
+    logger.info('end of query data fromTime=[%s], toTime=[%s].' % (starttime, endtime))
+
     return loantime_df
 
 
 
 def get_cdss_txntime():
-
     init_app()
+    logger = logging.getLogger(__name__)
+    starttime = time.time()
 
     sql=''' select  distinct partyid,firstAcqTxnTime,lastestAcqTxnTime
             from ac_cdss_db.PartyStatistic
@@ -97,6 +103,9 @@ def get_cdss_txntime():
         time_list.append(list(row))
 
     txntime_df=pd.DataFrame(time_list,columns=['partyid','firsttime','lasttime'])
+
+    endtime = time.time()
+    logger.info('end of query data fromTime=[%s], toTime=[%s].' % (starttime, endtime))
 
     return txntime_df
 
