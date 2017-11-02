@@ -45,7 +45,7 @@ def get_cif_M2():
                 where b.repaytime-b.duedate>33 or (b.repaytime is null and sysdate()-b.duedate>33)
               )y
               on x.partyid=y.pid
-              where loantime<'2017-09-01' '''
+              where loantime<to_date('2017-09-01','yyyy-mm-dd') '''
 
     sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/oracle/dev_dw_db')
 
