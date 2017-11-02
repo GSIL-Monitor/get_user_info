@@ -1,2 +1,3 @@
 recursive-include get_user_info/connect_database *
 recursive-include get_user_info/data_from_mongo *
+recursive-include get_user_info/config/get-user-info *

@@ -8,15 +8,26 @@ import json
 from datetime import datetime
 import pandas as pd
 from get_user_info.data_merge.send_email import EmailSend
+import time
+import logging
+from get_user_info.config import init_app
 
 def out_put_run():
 
+    init_app()
+
+    logger = logging.getLogger(__name__)
+
+    startime=time.time()
+
     m2_df=get_cif_M2()
-    m2_partyid=m2_df['partyid'].unique()
 
+    middle_time_1=time.time()
 
-    #cif_data=get_cif_collection()
+    logger.debug('get m2_df')
+
     mongo_lrds=get_lrds_maindoc()
+
 
     key_list=['partyid','applyid','age','gender','marr','city','creditcard_num','loan_num','higest_quota',
               'overdue_num','creditcard_userate','inquiry_num','zm_score','phone_city','contacts',
@@ -25,8 +36,8 @@ def out_put_run():
     result_list = []
     #for item in mongo_lrds.find({'crtTime':{'$gte':datetime(2017,1,1)}}):
     #for item in collection.find({'loanApplyInfo.data.partyId':{'$in':partyid_list}}):
-    #for item in mongo_lrds.find().sort('crtTime',-1).limit(10):
-    for item in mongo_lrds.find(no_cursor_timeout=True):
+    for item in mongo_lrds.find().sort('crtTime',-1).limit(10):
+    #for item in mongo_lrds.find(no_cursor_timeout=True):
         merge_dict=data_merge(item)
         if merge_dict=='None':
             continue
@@ -36,6 +47,9 @@ def out_put_run():
                 turn_list.append(merge_dict[keys])
             result_list.append(turn_list)
 
+    middle_time_2=time.time()
+
+    logger.info('get mongodb data, fromTime=[%s], toTime=[%s].' % (middle_time_1, middle_time_2))
 
     all_info_df=pd.DataFrame(result_list,columns=key_list)
 
@@ -48,6 +62,9 @@ def out_put_run():
 
     #与逾期数据融合
     end_all_info_df=pd.merge(m2_df,end_all_info_df,on='partyid',how='left')
+    endtime=time.time()
+
+    logger.info('data handle, fromTime=[%s], toTime=[%s].' % (middle_time_2, endtime))
 
     return end_all_info_df
 
@@ -56,7 +73,6 @@ def out_put_run():
 def email_task():
 
     score_df=out_put_run()
-
     excel_writer=pd.ExcelWriter('/home/andpay/data/excel/score_card.xlsx',engine='xlsxwriter')
     score_df.to_excel(excel_writer,index=False)
     excel_writer.save()
@@ -67,3 +83,6 @@ def email_task():
     attachment_file = "/home/andpay/data/excel/score_card.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
+
+
+

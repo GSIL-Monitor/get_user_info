@@ -4,15 +4,18 @@
 from ti_config import bootstrap
 from ti_daf import MongoTemplate
 from get_user_info.config import init_app
-
+import logging
 
 
 def get_lrds_maindoc():
+
+
+
     init_app()
 
     mongodb_path_lrds = bootstrap.ti_config_service.get_value('get_user_info.mongodb_path_lrds', default='/db/mongodb/ac_lrds_db')
     mongodb_name_lrds = bootstrap.ti_config_service.get_value('get_user_info.mongodb_name_lrds', default='ac_lrds_db')
-    #print(mongodb_path_lrds)
+
     db = MongoTemplate.get_database(mongodb_path_lrds, mongodb_name_lrds)
 
     #print(db.collection_names(include_system_collections=False))  查询数据库中的表
@@ -21,6 +24,7 @@ def get_lrds_maindoc():
     collection = db.get_collection("mainDoc")
 
     return  collection
+
 
 
 

@@ -3,15 +3,11 @@ score_card.download_file_sava_path=/Users/zlh/data/
 score_card.download_file_remote_url=https://dcs.andpay.me:8443/mixpanel/download?fileName=
 
 
-get_user_info.mongodb_path_lrds=/db/mongodb/mongo-lrds
+get_user_info.mongodb_path_lrds=/db/mongodb/ac_lrds_db
 get_user_info.mongodb_name_lrds=ac_lrds_db
-get_user_info.mongodb_path_cif=/db/mongodb/mongo-cif
+get_user_info.mongodb_path_cif=/db/mongodb/ac_cif_db
 get_user_info.mongodb_name_cif=ac_cif_db
-get_user_info.mongodb_path_psns=/db/mongodb/mongo-psns
+get_user_info.mongodb_path_psns=/db/mongodb/ac_psns_db
 get_user_info.mongodb_name_psns=ac_psns_db
 
 
-get_user_info.mysql_path_psns=/db/mysql/ac_psns_db
-get_user_info.mysql_name_psns=ac_psns_db
-get_user_info.mysql_path_cif=/db/mysql/ac_cif_db
-get_user_info.mysql_name_cif=ac_cif_db

@@ -77,8 +77,6 @@ def data_merge(item):
             var_contact = 0
 
 
-
-
         cdss_df=get_cdss_txntime()
 
         if var_partyid in cdss_df['partyid'].unique():
@@ -97,6 +95,7 @@ def data_merge(item):
 
 
         return result_dict
+
 
     else:
         return 'None'
