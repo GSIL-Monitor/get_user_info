@@ -65,6 +65,7 @@ def get_cif_loantime():
     init_app()
     logger = logging.getLogger(__name__)
     starttime = time.time()
+    logger.info('to get cif_loantime begin')
 
     sql='''
     select  partyid,max(loantime)  from dev_db.f_loanagreement 
@@ -91,6 +92,7 @@ def get_cdss_txntime():
     init_app()
     logger = logging.getLogger(__name__)
     starttime = time.time()
+    logger.info('to get cdss_txntime begin')
 
     sql=''' select  distinct partyid,firstAcqTxnTime,lastestAcqTxnTime
             from ac_cdss_db.PartyStatistic

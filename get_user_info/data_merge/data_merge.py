@@ -10,7 +10,8 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from get_user_info.connect_database.get_mysql_collection import get_cif_M2,get_psns_call,\
     get_cdss_txntime
-
+import logging
+import time
 
 
 def get_phone_city(phone):
@@ -36,6 +37,10 @@ def get_phone_city(phone):
 
 
 def data_merge(item):
+
+    logger = logging.getLogger(__name__)
+    starttime = time.time()
+    logger.info('to get cdss_txntime begin')
 
     basic_info = mongo_basicinfo()
     var_applyid=basic_info.get_applyid(item)
@@ -76,7 +81,7 @@ def data_merge(item):
         else:
             var_contact = 0
 
-
+        logger.info('get mysql data begin')
         cdss_df=get_cdss_txntime()
 
         if var_partyid in cdss_df['partyid'].unique():
@@ -93,12 +98,11 @@ def data_merge(item):
                      'zm_score':var_zm_score,'partyid':var_partyid,'phone_city':var_phone_city,'contacts':var_contact,
                      'td_score':var_td_score,'first_txntime':var_first_txntime,'last_txntime':var_last_txntime}
 
-
         return result_dict
 
 
     else:
         return 'None'
 
-
-
+    endtime = time.time()
+    logger.info('end of  data  merge fromTime=[%s], toTime=[%s].' % (starttime, endtime))
