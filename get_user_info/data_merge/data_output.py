@@ -30,7 +30,7 @@ def out_put_run():
 
 
     key_list=['partyid','applyid','age','gender','marr','city','creditcard_num','loan_num','higest_quota',
-              'overdue_num','creditcard_userate','inquiry_num','zm_score','phone_city','contacts',
+              'overdue_num','creditcard_userate','inquiry_num','zm_score','contacts',
               'td_score']
 
     result_list = []

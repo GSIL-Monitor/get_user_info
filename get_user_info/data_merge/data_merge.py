@@ -45,24 +45,16 @@ def data_merge(item):
 
     #排除applyid开头为T的数据
     if list(var_applyid)[0]!='T':
-        print('basicinfo run',time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_partyid=basic_info.get_partyid(item)
-        print('basicinfo run 1', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_phone=basic_info.get_phone(item)
-        print('basicinfo run 2', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
         #basicinfo
         var_age=basic_info.get_age(item)
-        print('basicinfo run 3', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_gender=basic_info.get_gender(item)
-        print('basicinfo run 4', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_marr=basic_info.get_marr(item)
-        print('basicinfo run 5', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_city=basic_info.get_city(item)
-        print('basicinfo run 6', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-        var_phone_city=get_phone_city(var_phone)
+        #var_phone_city=get_phone_city(var_phone)
 
-        print('pcrinfo run', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         pcr_info=mongo_pcrinfo()
 
         #pcrinfo
@@ -73,7 +65,6 @@ def data_merge(item):
         var_card_userate=pcr_info.get_creditcard_userate(item)
         var_inquiry_num=pcr_info.get_credit_inquiry(item)
 
-        print('additionalinfo run', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         additional_info = mongo_additionalinfo()
 
         #additionalinfo
@@ -97,10 +88,9 @@ def data_merge(item):
         result_dict={'applyid':var_applyid,'age':var_age,'gender':var_gender,'marr':var_marr,'city':var_city,
                      'creditcard_num':var_creditcard_num,'loan_num':var_loan_num,'higest_quota':var_higest_quota,
                      'overdue_num':var_overdue_num,'creditcard_userate':var_card_userate,'inquiry_num':var_inquiry_num,
-                     'zm_score':var_zm_score,'partyid':var_partyid,'phone_city':var_phone_city,'contacts':var_contact,
+                     'zm_score':var_zm_score,'partyid':var_partyid,'contacts':var_contact,
                      'td_score':var_td_score}
 
-        print('last step',time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         return result_dict
 
 
