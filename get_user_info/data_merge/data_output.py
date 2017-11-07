@@ -39,6 +39,7 @@ def out_put_run():
     #for item in mongo_lrds.find().sort('crtTime',-1).limit(10):
     logger.info('star loop')
     for item in mongo_lrds.find(no_cursor_timeout=True):
+        print(item)
         merge_dict=data_merge(item)
         logger.info('star if')
         if merge_dict=='None':
