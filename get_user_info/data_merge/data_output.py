@@ -20,7 +20,7 @@ def out_put_run():
     startime=time.time()
     logger.info('to get m2_df begin')
 
-    m2_df=get_cif_M2()
+    #m2_df=get_cif_M2()
 
     middle_time_1=time.time()
 
@@ -41,7 +41,7 @@ def out_put_run():
     x=0
     for item in mongo_lrds.find(no_cursor_timeout=True):
         x=x+1
-        print(x,time.strftime("%Y-%m-%d %H:%M:%S",time.time()))
+        print(x,time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
         merge_dict=data_merge(item)
         logger.info('star if')
         if merge_dict=='None':
@@ -90,5 +90,5 @@ def email_task():
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
 
-
+out_put_run()
 
