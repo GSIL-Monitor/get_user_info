@@ -43,6 +43,7 @@ def out_put_run():
         x=x+1
         print(x,time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
         merge_dict=data_merge(item)
+        print(merge_dict)
         logger.info('star if')
         if merge_dict=='None':
             continue
