@@ -40,10 +40,6 @@ def get_phone_city(phone):
 
 def data_merge(item):
 
-    logger = logging.getLogger(__name__)
-    starttime = time.time()
-
-
     basic_info = mongo_basicinfo()
     var_applyid=basic_info.get_applyid(item)
 
@@ -51,13 +47,19 @@ def data_merge(item):
     if list(var_applyid)[0]!='T':
         print('basicinfo run',time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_partyid=basic_info.get_partyid(item)
+        print('basicinfo run 1', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_phone=basic_info.get_phone(item)
+        print('basicinfo run 2', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
         #basicinfo
         var_age=basic_info.get_age(item)
+        print('basicinfo run 3', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_gender=basic_info.get_gender(item)
+        print('basicinfo run 4', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_marr=basic_info.get_marr(item)
+        print('basicinfo run 5', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_city=basic_info.get_city(item)
+        print('basicinfo run 6', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_phone_city=get_phone_city(var_phone)
 
         print('pcrinfo run', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
@@ -105,5 +107,3 @@ def data_merge(item):
     else:
         return 'None'
 
-    endtime = time.time()
-    logger.info('end of  data  merge fromTime=[%s], toTime=[%s].' % (starttime, endtime))
