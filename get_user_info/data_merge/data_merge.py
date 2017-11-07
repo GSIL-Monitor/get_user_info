@@ -14,6 +14,8 @@ import logging
 import time
 
 
+cdss_df=get_cdss_txntime()
+
 def get_phone_city(phone):
 
     url="http://www.2dianying.net/search/"
@@ -78,7 +80,7 @@ def data_merge(item):
 
 
         logger.info('get mysql data begin')
-        cdss_df=get_cdss_txntime()
+
 
         if var_partyid in cdss_df['partyid'].unique():
             var_first_txntime=cdss_df[cdss_df['partyid']==var_partyid]['firsttime'].values[0]

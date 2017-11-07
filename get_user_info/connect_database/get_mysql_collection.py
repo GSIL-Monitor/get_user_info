@@ -99,5 +99,3 @@ def get_cdss_txntime():
     return txntime_df
 
 
-xx=get_cdss_txntime()
-print(xx)
