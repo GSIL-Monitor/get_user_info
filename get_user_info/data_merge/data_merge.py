@@ -14,7 +14,7 @@ import logging
 import time
 
 
-cdss_df=get_cdss_txntime()
+#cdss_df=get_cdss_txntime()
 
 def get_phone_city(phone):
 
@@ -78,23 +78,24 @@ def data_merge(item):
         var_td_score=additional_info.get_tdscore(item)
         var_contact=additional_info.get_contact(item)
 
-
+        '''
         logger.info('get mysql data begin')
 
-
+        
         if var_partyid in cdss_df['partyid'].unique():
             var_first_txntime=cdss_df[cdss_df['partyid']==var_partyid]['firsttime'].values[0]
             var_last_txntime=cdss_df[cdss_df['partyid']==var_partyid]['lasttime'].values[0]
         else:
             var_first_txntime='None'
             var_last_txntime='None'
-
+            ,'first_txntime':var_first_txntime,'last_txntime':var_last_txntime
+        '''
 
         result_dict={'applyid':var_applyid,'age':var_age,'gender':var_gender,'marr':var_marr,'city':var_city,
                      'creditcard_num':var_creditcard_num,'loan_num':var_loan_num,'higest_quota':var_higest_quota,
                      'overdue_num':var_overdue_num,'creditcard_userate':var_card_userate,'inquiry_num':var_inquiry_num,
                      'zm_score':var_zm_score,'partyid':var_partyid,'phone_city':var_phone_city,'contacts':var_contact,
-                     'td_score':var_td_score,'first_txntime':var_first_txntime,'last_txntime':var_last_txntime}
+                     'td_score':var_td_score}
 
         return result_dict
 

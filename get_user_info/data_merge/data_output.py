@@ -31,7 +31,7 @@ def out_put_run():
 
     key_list=['partyid','applyid','age','gender','marr','city','creditcard_num','loan_num','higest_quota',
               'overdue_num','creditcard_userate','inquiry_num','zm_score','phone_city','contacts',
-              'td_score','first_txntime','last_txntime']
+              'td_score']
 
     result_list = []
     #for item in mongo_lrds.find({'crtTime':{'$gte':datetime(2017,1,1)}}):
