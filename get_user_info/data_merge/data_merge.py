@@ -52,7 +52,6 @@ def data_merge(item):
         var_partyid=basic_info.get_partyid(item)
         var_phone=basic_info.get_phone(item)
 
-        logger.info('run basicinfo ')
         #basicinfo
         var_age=basic_info.get_age(item)
         var_gender=basic_info.get_gender(item)
@@ -60,7 +59,6 @@ def data_merge(item):
         var_city=basic_info.get_city(item)
         var_phone_city=get_phone_city(var_phone)
 
-        logger.info('run pcrinfo ')
         pcr_info=mongo_pcrinfo()
 
         #pcrinfo
@@ -71,7 +69,6 @@ def data_merge(item):
         var_card_userate=pcr_info.get_creditcard_userate(item)
         var_inquiry_num=pcr_info.get_credit_inquiry(item)
 
-        logger.info('run additonalinfo ')
         additional_info = mongo_additionalinfo()
 
         #additionalinfo
