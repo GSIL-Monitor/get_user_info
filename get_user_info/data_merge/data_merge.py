@@ -8,7 +8,7 @@ import urllib.request
 import urllib.parse
 from bs4 import BeautifulSoup
 from datetime import datetime
-from get_user_info.connect_database.get_mysql_collection import get_cif_M2,get_psns_call,\
+from get_user_info.connect_database.get_mysql_collection import get_cif_M2,\
     get_cdss_txntime
 import logging
 import time
