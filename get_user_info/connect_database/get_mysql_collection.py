@@ -87,8 +87,10 @@ def get_cdss_txntime():
 
     time_list=[]
     for row in sql_row:
+        logger.info('loop ing')
         time_list.append(list(row))
 
+    logger.info('loop end')
     txntime_df=pd.DataFrame(time_list,columns=['partyid','firsttime','lasttime'])
 
     endtime = time.time()
@@ -96,3 +98,6 @@ def get_cdss_txntime():
 
     return txntime_df
 
+
+xx=get_cdss_txntime()
+print(xx)
