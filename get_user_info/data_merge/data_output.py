@@ -39,7 +39,7 @@ def out_put_run():
     #for item in mongo_lrds.find().sort('crtTime',-1).limit(10):
     logger.info('star loop')
     x=0
-    for item in mongo_lrds.find(no_cursor_timeout=True):
+    for item in mongo_lrds.find(no_cursor_timeout=True).batch_size(500):
         x=x+1
         print(x,time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
         merge_dict=data_merge(item)
