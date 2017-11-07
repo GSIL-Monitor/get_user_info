@@ -9,23 +9,6 @@ from datetime import datetime
 import logging
 import time
 
-def get_psns_call():
-
-    init_app()
-
-    sql = 'select  a.partyid,count(distinct b.idcallee) count_contact from Caller a left join Callee b ' \
-          'on a.idcaller=b.idcaller' \
-          ' group by a.partyid'
-
-    sql_row = sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/mysql/ac_psns_db')
-
-    contact_list=[]
-    for row in sql_row:
-        contact_list.append(list(row))
-
-    contact_df=pd.DataFrame(contact_list,columns=['partyid','contacts'])
-    return contact_df
-
 
 
 def get_cif_M2():
@@ -94,11 +77,13 @@ def get_cdss_txntime():
     starttime = time.time()
     logger.info('to get cdss_txntime begin')
 
-    sql=''' select  distinct partyid,firstAcqTxnTime,lastestAcqTxnTime
-            from ac_cdss_db.PartyStatistic
+    sql=''' select  distinct txnpartyid,min(txntime),max(txntime)
+            from dev_dw.f_txnlist
+            where txnflag='S' and salesamt>0 
+            group by txnpartyid
     '''
 
-    sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/mysql/ac_cif_db')
+    sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/oracle/dev_dw_db')
 
     time_list=[]
     for row in sql_row:

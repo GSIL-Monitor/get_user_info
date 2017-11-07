@@ -70,16 +70,12 @@ def data_merge(item):
         var_inquiry_num=pcr_info.get_credit_inquiry(item)
 
         additional_info = mongo_additionalinfo()
-        contact_df=get_psns_call()
 
         #additionalinfo
         var_zm_score=additional_info.get_zmscore(item)
         var_td_score=additional_info.get_tdscore(item)
+        var_contact=additional_info.get_contact(item)
 
-        if var_partyid in contact_df['partyid'].unique():
-            var_contact = contact_df[contact_df['partyid'] == var_partyid]['contacts'].values[0]
-        else:
-            var_contact = 0
 
         logger.info('get mysql data begin')
         cdss_df=get_cdss_txntime()
