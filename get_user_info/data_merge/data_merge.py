@@ -49,6 +49,7 @@ def data_merge(item):
 
     #排除applyid开头为T的数据
     if list(var_applyid)[0]!='T':
+        print('basicinfo run',time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         var_partyid=basic_info.get_partyid(item)
         var_phone=basic_info.get_phone(item)
 
@@ -59,6 +60,7 @@ def data_merge(item):
         var_city=basic_info.get_city(item)
         var_phone_city=get_phone_city(var_phone)
 
+        print('pcrinfo run', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         pcr_info=mongo_pcrinfo()
 
         #pcrinfo
@@ -69,6 +71,7 @@ def data_merge(item):
         var_card_userate=pcr_info.get_creditcard_userate(item)
         var_inquiry_num=pcr_info.get_credit_inquiry(item)
 
+        print('additionalinfo run', time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         additional_info = mongo_additionalinfo()
 
         #additionalinfo
@@ -95,6 +98,7 @@ def data_merge(item):
                      'zm_score':var_zm_score,'partyid':var_partyid,'phone_city':var_phone_city,'contacts':var_contact,
                      'td_score':var_td_score}
 
+        print('last step',time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         return result_dict
 
 
