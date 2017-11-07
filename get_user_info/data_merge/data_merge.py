@@ -42,7 +42,7 @@ def data_merge(item):
 
     logger = logging.getLogger(__name__)
     starttime = time.time()
-    logger.info('to get cdss_txntime begin')
+
 
     basic_info = mongo_basicinfo()
     var_applyid=basic_info.get_applyid(item)

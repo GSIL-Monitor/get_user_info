@@ -38,23 +38,25 @@ def out_put_run():
     #for item in collection.find({'loanApplyInfo.data.partyId':{'$in':partyid_list}}):
     #for item in mongo_lrds.find().sort('crtTime',-1).limit(10):
     logger.info('star loop')
-    x=0
-
+    count=0
+    data_soure=[]
     for item in mongo_lrds.find(no_cursor_timeout=True).batch_size(500):
-        x=x+1
-        print(x,time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
-        merge_dict=data_merge(item)
-        print(merge_dict)
-        logger.info('star if')
-        if merge_dict=='None':
-            continue
-        else:
-            turn_list=[]
-            logger.info('begin second loop')
-            for keys in key_list:
-                turn_list.append(merge_dict[keys])
-            result_list.append(turn_list)
-            logger.info('end if')
+        data_soure.append(item)
+        count=count+1
+        if count==50:
+            print(time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
+            for item in data_soure:
+                merge_dict=data_merge(item)
+                print(merge_dict)
+                if merge_dict=='None':
+                    continue
+                else:
+                    turn_list=[]
+                    for keys in key_list:
+                        turn_list.append(merge_dict[keys])
+                    result_list.append(turn_list)
+            data_soure=[]
+            count=0
 
     middle_time_2=time.time()
     logger.info('get mongodb data, fromTime=[%s], toTime=[%s].' % (middle_time_1, middle_time_2))
