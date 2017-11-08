@@ -18,9 +18,8 @@ def out_put_run():
     logger = logging.getLogger(__name__)
 
     startime=time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())
-    logger.info('to get m2_df begin')
-
-    m2_df=get_cif_M2()
+    #logger.info('to get m2_df begin')
+    #m2_df=get_cif_M2()
     mongo_lrds=get_lrds_maindoc()
 
 
@@ -55,19 +54,19 @@ def out_put_run():
     all_info_df=pd.DataFrame(result_list,columns=key_list)
 
     #选取最大applyID
-    applyid_df=all_info_df.groupby(all_info_df['partyid']).agg({'applyid':'max'}).reset_index()
-    applyid_serise=applyid_df['applyid']
+    #applyid_df=all_info_df.groupby(all_info_df['partyid']).agg({'applyid':'max'}).reset_index()
+    #applyid_serise=applyid_df['applyid']
 
     #按最大applyid进行过滤
-    end_all_info_df=all_info_df[all_info_df['applyid'].isin(applyid_serise)]
+    #end_all_info_df=all_info_df[all_info_df['applyid'].isin(applyid_serise)]
 
     #与逾期数据融合
-    end_all_info_df=pd.merge(m2_df,end_all_info_df,on='partyid',how='left')
+    #end_all_info_df=pd.merge(m2_df,end_all_info_df,on='partyid',how='left')
 
     endtime=time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())
     logger.info('data handle, fromTime=[%s], toTime=[%s].' % (startime, endtime))
 
-    return end_all_info_df
+    return all_info_df
 
 
 
