@@ -49,7 +49,7 @@ class mongo_additionalinfo():
         key_list=['partyInfo','data','partyMobileContacts','mobileContacts']
         contact=dict_parse.dict_parse(data,key_list,4)
 
-        if contact=='None':
+        if contact is None or contact=='None':
             num=0
         else:
             num=len(contact)

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611be7e2-db84-4523-8edf-f5ca03c2b615" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_from_mongo/dict_parse.py" afterPath="$PROJECT_DIR$/get_user_info/data_from_mongo/dict_parse.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py" afterPath="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_merge/data_merge.py" afterPath="$PROJECT_DIR$/get_user_info/data_merge/data_merge.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" afterPath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="data_output.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_output.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/data_output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+            <state relative-caret-position="141">
+              <caret line="54" column="58" lean-forward="true" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
               <folding>
                 <element signature="e#36#110#0" expanded="true" />
               </folding>
@@ -42,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mongo_additionalinfo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mongo_additionalinfo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+            <state relative-caret-position="230">
+              <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
               <folding>
                 <element signature="e#36#88#0" expanded="true" />
               </folding>
@@ -128,10 +124,10 @@
         <option value="$PROJECT_DIR$/get_user_info/data_merge/main.py" />
         <option value="$PROJECT_DIR$/get_user_info/config/get-user-info/logging.ini" />
         <option value="$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py" />
-        <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/data_merge.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/dict_parse.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
+        <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py" />
       </list>
     </option>
   </component>
@@ -915,22 +911,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py">
+    <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/data_merge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+        <state relative-caret-position="338">
+          <caret line="86" column="33" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
           <folding>
-            <element signature="e#37#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-          <folding>
-            <element signature="e#36#88#0" expanded="true" />
+            <element signature="e#36#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -943,22 +929,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/data_merge.py">
+    <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/data_output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="86" column="33" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+        <state relative-caret-position="141">
+          <caret line="54" column="58" lean-forward="true" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
           <folding>
-            <element signature="e#36#109#0" expanded="true" />
+            <element signature="e#36#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/data_output.py">
+    <entry file="file://$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        <state relative-caret-position="353">
+          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
           <folding>
-            <element signature="e#36#110#0" expanded="true" />
+            <element signature="e#37#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding>
+            <element signature="e#36#88#0" expanded="true" />
           </folding>
         </state>
       </provider>
