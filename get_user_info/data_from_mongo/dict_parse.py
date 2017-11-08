@@ -6,9 +6,9 @@ def dict_parse(var_dict,key_ls,layer):
 
     if layer==2:
 
-        if key_ls[0] not in var_dict.keys():
+        if var_dict is None or key_ls[0] not in var_dict.keys():
             value='None'
-        elif key_ls[1] not in var_dict[key_ls[0]].keys():
+        elif var_dict[key_ls[0]] is None or key_ls[1] not in var_dict[key_ls[0]].keys():
             value='None'
         else:
             value=var_dict[key_ls[0]][key_ls[1]]
@@ -19,11 +19,11 @@ def dict_parse(var_dict,key_ls,layer):
 
     if layer==3:
 
-        if key_ls[0] not in var_dict.keys():
+        if var_dict is None or key_ls[0] not in var_dict.keys():
             value='None'
-        elif key_ls[1] not in var_dict[key_ls[0]].keys():
+        elif var_dict[key_ls[0]] is None or key_ls[1] not in var_dict[key_ls[0]].keys():
             value='None'
-        elif key_ls[2] not in var_dict[key_ls[0]][key_ls[1]].keys():
+        elif var_dict[key_ls[0]][key_ls[1]] is None or key_ls[2] not in var_dict[key_ls[0]][key_ls[1]].keys():
             value='None'
         else:
             value = var_dict[key_ls[0]][key_ls[1]][key_ls[2]]
@@ -33,16 +33,16 @@ def dict_parse(var_dict,key_ls,layer):
 
     if layer==4:
 
-        if key_ls[0] not in var_dict.keys():
+        if var_dict is None or key_ls[0] not in var_dict.keys():
+            value = 'None'
+        elif var_dict[key_ls[0]] is None or key_ls[1] not in var_dict[key_ls[0]].keys():
             value='None'
-        elif key_ls[1] not in var_dict[key_ls[0]].keys():
+        elif var_dict[key_ls[0]][key_ls[1]] is None or key_ls[2] not in var_dict[key_ls[0]][key_ls[1]].keys():
             value='None'
-        elif key_ls[2] not in var_dict[key_ls[0]][key_ls[1]].keys():
-            value='None'
-        elif key_ls[3] not in var_dict[key_ls[0]][key_ls[1]][key_ls[2]].keys():
-            value='None'
+        elif var_dict[key_ls[0]][key_ls[1]][key_ls[2]] is None or key_ls[3] not in var_dict[key_ls[0]][key_ls[1]][key_ls[2]].keys():
+            value = 'None'
         else:
-            value=var_dict[key_ls[0]][key_ls[1]][key_ls[2]][key_ls[3]]
+            value = var_dict[key_ls[0]][key_ls[1]][key_ls[2]][key_ls[3]]
 
         return value
 

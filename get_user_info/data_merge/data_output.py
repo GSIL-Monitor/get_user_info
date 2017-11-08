@@ -25,8 +25,8 @@ def out_put_run():
 
 
     key_list=['partyid','applyid','age','gender','marr','city','creditcard_num','loan_num','higest_quota',
-              'overdue_num','creditcard_userate','inquiry_num','zm_score','contacts',
-              'td_score']
+              'overdue_num','creditcard_userate','inquiry_num','contacts','td_score','zm_score','zm_atfscore',
+              'zm_watchlist','zm_risklist']
 
     count=0
     data_soure=[]
@@ -84,6 +84,4 @@ def email_task():
     attachment_file = "/home/andpay/data/excel/get_user_info.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
-
-
 

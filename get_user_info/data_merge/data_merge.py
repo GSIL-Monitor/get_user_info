@@ -69,6 +69,9 @@ def data_merge(item):
 
         #additionalinfo
         var_zm_score=additional_info.get_zmscore(item)
+        var_zm_atfscore=additional_info.get_zmatfscore(item)
+        var_zm_watchlist=additional_info.get_zmwatchlist(item)
+        var_zm_risklist=additional_info.get_zmrisklist(item)
         var_td_score=additional_info.get_tdscore(item)
         var_contact=additional_info.get_contact(item)
 
@@ -88,8 +91,8 @@ def data_merge(item):
         result_dict={'applyid':var_applyid,'age':var_age,'gender':var_gender,'marr':var_marr,'city':var_city,
                      'creditcard_num':var_creditcard_num,'loan_num':var_loan_num,'higest_quota':var_higest_quota,
                      'overdue_num':var_overdue_num,'creditcard_userate':var_card_userate,'inquiry_num':var_inquiry_num,
-                     'zm_score':var_zm_score,'partyid':var_partyid,'contacts':var_contact,
-                     'td_score':var_td_score}
+                     'zm_score':var_zm_score,'partyid':var_partyid,'contacts':var_contact,'zm_atfscore':var_zm_atfscore,
+                     'td_score':var_td_score,'zm_watchlist':var_zm_watchlist,'zm_risklist':var_zm_risklist}
 
         return result_dict
 

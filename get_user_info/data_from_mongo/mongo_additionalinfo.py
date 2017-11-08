@@ -16,11 +16,34 @@ class mongo_additionalinfo():
 
         return zm_score
 
+
+    def get_zmatfscore(self,data):
+        key_list=['zmxyAntifraudScoreReport','data','score']
+        zmatfscore=dict_parse.dict_parse(data,key_list,3)
+
+        return zmatfscore
+
+
+    def get_zmwatchlist(self,data):
+        key_list=['zmxyWatchListReport','data','isMatched']
+        watchlist=dict_parse.dict_parse(data,key_list,3)
+
+        return watchlist
+
+
+    def get_zmrisklist(self,data):
+        key_list=['zmxyAntifraudRiskListReport','data','hit']
+        risklist=dict_parse.dict_parse(data,key_list,3)
+
+        return risklist
+
+
     def get_tdscore(self,data):
         key_list=['tdReport','data','final_score']
         td_score=dict_parse.dict_parse(data,key_list,3)
 
         return td_score
+
 
     def get_contact(self,data):
         key_list=['partyInfo','data','partyMobileContacts','mobileContacts']
@@ -32,6 +55,8 @@ class mongo_additionalinfo():
             num=len(contact)
 
         return num
+
+
 
 
 
