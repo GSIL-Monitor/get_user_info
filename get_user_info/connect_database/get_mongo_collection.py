@@ -40,6 +40,7 @@ def get_cif_partyadditioninfo():
 
     collection = db.get_collection("PartyAdditionInfo")
 
+
     return collection
 
 
@@ -55,3 +56,6 @@ def get_psns_phonecontact():
     collection = db.get_collection("phoneContacts")
 
     return collection
+
+
+get_cif_partyadditioninfo()

@@ -21,7 +21,7 @@ def out_put_run():
     #logger.info('to get m2_df begin')
     #m2_df=get_cif_M2()
     mongo_lrds=get_lrds_maindoc()
-
+    print(mongo_lrds)
 
     key_list=['partyid','applyid','age','gender','marr','city','creditcard_num','loan_num','higest_quota',
               'overdue_num','creditcard_userate','inquiry_num','contacts','td_score','zm_score','zm_atfscore',
@@ -84,3 +84,5 @@ def email_task():
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
 
+
+out_put_run()
