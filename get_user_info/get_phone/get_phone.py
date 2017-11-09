@@ -6,8 +6,11 @@ from get_user_info.connect_database.get_mongo_collection import get_cif_partyadd
 import pandas as pd
 from get_user_info.config import init_app
 from get_user_info.data_merge.send_email import EmailSend
+import os
 
-party_df=pd.read_excel('partyid.xlsx')
+path=os.path.dirname(__file__)
+path=path+'/partyid.xlsx'
+party_df=pd.read_excel(path)
 party_list=party_df['PARTYID']
 
 
