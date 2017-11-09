@@ -11,7 +11,8 @@ import os
 path=os.path.dirname(__file__)
 path=path+'/partyid.xlsx'
 party_df=pd.read_excel(path)
-party_list=party_df['PARTYID']
+party_list=list(party_df['PARTYID'])
+
 
 
 def get_relative(item):
@@ -66,3 +67,5 @@ def email_task():
     attachment_file = "/home/andpay/data/excel/phone.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
+
+get_relative_phone()
