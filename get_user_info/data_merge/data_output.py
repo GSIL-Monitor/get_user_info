@@ -66,13 +66,14 @@ def out_put_run():
 
 
 
-
 def email_task():
 
+    '''
     score_df=out_put_run()
     excel_writer=pd.ExcelWriter('/home/andpay/data/excel/get_user_info_2.xlsx',engine='xlsxwriter')
     score_df.to_excel(excel_writer,index=False)
     excel_writer.save()
+    '''
 
     subject = 'get_user_info'
     to_addrs = ['kesheng.wang@andpay.me']
@@ -80,6 +81,7 @@ def email_task():
     attachment_file = "/home/andpay/data/excel/get_user_info_2.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
+
 
 
 '''
