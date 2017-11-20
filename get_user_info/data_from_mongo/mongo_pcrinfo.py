@@ -8,58 +8,99 @@ from get_user_info.connect_database import get_mongo_collection
 
 class mongo_pcrinfo():
 
-    def get_credit_num(self,data):
-        key_list = ['pcrReport', 'data', 'creditCardStats', 'validCNYCreditCardCount']
-        card_num = dict_parse.dict_parse(data, key_list, 4)
+#pcr baseinfo
 
-        return card_num
+    def get_pcr_baseinfo(self,return_para):
+        key_list=['pcrReport', 'data', 'baseInfo']
+        mid_dict=dict_parse.dict_parse(self,key_list,len(key_list))
 
-    def get_loan_num(self,data):
-        key_list = ['pcrReport', 'data', 'pcrLoanRecords']
-        loan_data = dict_parse.dict_parse(data, key_list, 3)
+        key_name = ['maritalStatus', 'creditCardNum', 'overduedCounts', 'exceedNinetyDaysCounts','maxMonthsOverdue',
+                    'haveBadDebts', 'totalCreditLine', 'totalCreditLineUsed', 'loanFreq', 'totalLoanAmount',
+                    'totalLoanBalance', 'cceRate']
 
-        loan_num = 0
-        for item in loan_data:
-            if item['loanType'] == '1' or item['loanType'] == '4':
-                loan_num += 1
+        count_list = []
+        for key in key_name:
+            if mid_dict =='None' or mid_dict is None or key not in mid_dict.keys():
+                count_list.append('None')
+            else:
+                value = mid_dict[key]
+                count_list.append(value)
 
-        return loan_num
+        if return_para == 'name':
+            return key_name
+        elif return_para == 'value':
+            return count_list
 
 
-    def get_creditcard_higest_quota(self,data):
-        key_list = ['pcrReport', 'data', 'creditCardStats', 'validCNYCreditCardMaxCreditLine']
-        higest_quota = dict_parse.dict_parse(data, key_list, 4)
+    def get_pcr_creditcardstatus(self,return_para):
+        key_list = ['pcrReport', 'data', 'creditCardStats']
+        mid_dict = dict_parse.dict_parse(self, key_list, len(key_list))
 
-        return higest_quota
+        key_name = ['cardCount', 'badDebtCardCount', 'overDue90DayCardCount','overDueUpToNowCardCount',
+                    'totalMonthsOverdue','overDueUpToNowAmount', 'validCNYCreditCardCount','validCNYCreditCardMaxCreditLine',
+                    'validCNYCreditCardTotalCreditLine', 'validCNYCreditCardTotalCreditLineUsed','validCNYCreditCardCreditUsageRate',
+                    'validCNYCreditCardMinOpenDate', 'validCNYCreditCardMaxOpenMonthSpan']
+
+        count_list = []
+        for key in key_name:
+            if mid_dict =='None' or mid_dict is None or key not in mid_dict.keys():
+                count_list.append('None')
+            else:
+                value = mid_dict[key]
+                count_list.append(value)
+
+        if return_para == 'name':
+            return key_name
+        elif return_para == 'value':
+            return count_list
 
 
-    def get_history_overduenum(self,data):
-        key_list = ['pcrReport', 'data', 'baseInfo', 'overduedCounts']
-        overdue_num = dict_parse.dict_parse(data, key_list, 4)
 
-        return overdue_num
+    def get_pcr_loanstatus(self,return_para):
+        key_list = ['pcrReport', 'data', 'loanStats']
+        mid_dict = dict_parse.dict_parse(self, key_list, len(key_list))
 
-    def get_creditcard_userate(self,data):
-        key_list = ['pcrReport', 'data', 'creditCardStats', 'validCNYCreditCardCreditUsageRate']
-        use_rate = dict_parse.dict_parse(data, key_list, 4)
+        key_name = ['overDueUpToNowBizLoanAmount', 'overDueUpToNowLoanCount','overDueUpToNowOtherLoanAmount', 'overDue90DayBizLoanCount',
+                    'overDueUpToNowCarLoanAmount', 'overDue90DayOtherLoanCount', 'overDueUpToNowHousingLoanCount',
+                    'overDue90DayHousingLoanCount', 'overDueUpToNowCarLoanCount','overDueUpToNowHomeLoanCount', 'badDebtLoanCount',
+                    'overDueUpToNowHomeLoanAmount', 'overDueUpToNowOtherLoanCount','overDue90DayHomeLoanCount', 'totalMonthsOverdue',
+                    'overDueUpToNowHousingLoanAmount', 'loanCount', 'overDue90DayLoanCount',
+                    'overDue90DayCarLoanCount','overDueUpToNowBizLoanCount']
 
-        return use_rate
+        count_list = []
+        for key in key_name:
+            if  mid_dict =='None' or mid_dict is None or key not in mid_dict.keys() :
+                count_list.append('None')
+            else:
+                value = mid_dict[key]
+                count_list.append(value)
 
-    def get_credit_inquiry(self,data):
-        key_list = ['pcrReport', 'data', 'pcrAccessRecords']
-        inquiry_data = dict_parse.dict_parse(data, key_list, 3)
+        if return_para == 'name':
+            return key_name
+        elif return_para == 'value':
+            return count_list
 
-        inquiry_num = 0
 
-        if inquiry_data == 'None':
-            inquiry_num = 'None'
-        else:
-            for item in inquiry_data:
-                if item['accessReason'] != '贷后管理':
-                    inquiry_num += 1
 
-        return inquiry_num
+    def get_pcr_accesstatus(self,return_para):
+        key_list = ['pcrReport', 'data', 'accessStats']
+        mid_dict = dict_parse.dict_parse(self, key_list, len(key_list))
 
+        key_name = ['selfInqInLast3m', 'auditInqInLast3m', 'selfInqInLast6m', 'accessCount',
+                    'counterQueryCount', 'selfInqViaCounterInLast6m']
+
+        count_list = []
+        for key in key_name:
+            if mid_dict =='None' or mid_dict is None or key not in mid_dict.keys():
+                count_list.append('None')
+            else:
+                value = mid_dict[key]
+                count_list.append(value)
+
+        if return_para == 'name':
+            return key_name
+        elif return_para == 'value':
+            return count_list
 
 
 

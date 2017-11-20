@@ -14,7 +14,6 @@ party_df=pd.read_excel(path)
 party_list=list(party_df['PARTYID'])
 
 
-
 def get_relative(item):
     key_list=['contactsInfo','relative','mobile']
     relative_mobile=dict_parse(item,key_list,3)

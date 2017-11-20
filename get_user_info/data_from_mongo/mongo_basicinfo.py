@@ -7,15 +7,18 @@ import pandas as pd
 import datetime as dt
 import os
 
+def get_file():
+    path = os.path.dirname(__file__)
+    path = path + '/city.xlsx'
+    city_file = pd.read_excel(path)
+    return city_file
+
 class mongo_basicinfo():
 
-    path=os.path.dirname(__file__)
-    path=path+'/city.xlsx'
-    city_file=pd.read_excel(path)
 
-    def get_age(self,data):
+    def get_age(self):
         key_list = ['loanApplyInfo', 'data', 'certNo']
-        certno = dict_parse.dict_parse(data, key_list, 3)
+        certno = dict_parse.dict_parse(self, key_list, 3)
 
         if len(certno) == 18:
             born_date = certno[6:10]
@@ -26,9 +29,9 @@ class mongo_basicinfo():
 
         return age
 
-    def get_gender(self,data):
+    def get_gender(self):
         key_list = ['loanApplyInfo', 'data', 'certNo']
-        certno = dict_parse.dict_parse(data, key_list, 3)
+        certno = dict_parse.dict_parse(self, key_list, 3)
 
         if len(certno) == 18:
             gender = certno[16:17]
@@ -38,9 +41,9 @@ class mongo_basicinfo():
 
         return gender_num
 
-    def get_marr(self,data):
+    def get_marr(self):
         key_list = ['loanApplyInfo', 'data', 'marriaged']
-        marr = dict_parse.dict_parse(data, key_list, 3)
+        marr = dict_parse.dict_parse(self, key_list, 3)
 
         return marr
 
@@ -49,13 +52,12 @@ class mongo_basicinfo():
         certno = dict_parse.dict_parse(data, key_list, 3)
 
         if len(certno) == 18:
-
             no = certno[0:4]
 
             city_list = []
-            for cityno in self.city_file['city_no']:
+            for cityno in self['city_no']:
                 if str(cityno)[0:4] == no:
-                    var_city = self.city_file[self.city_file['city_no'] == cityno]['city'].values[0]
+                    var_city = self[self['city_no'] == cityno]['city'].values[0]
                     city_list.append(var_city)
 
             if len(city_list) > 0:
@@ -68,19 +70,19 @@ class mongo_basicinfo():
 
         return city
 
-    def get_partyid(self,data):
+    def get_partyid(self):
         key_list = ['loanApplyInfo', 'data', 'partyId']
-        partyid = dict_parse.dict_parse(data, key_list, 3)
+        partyid = dict_parse.dict_parse(self, key_list, 3)
 
         return partyid
 
-    def get_phone(self,data):
+    def get_phone(self):
         key_list = ['loanApplyInfo', 'data', 'mobile']
-        phone = dict_parse.dict_parse(data, key_list, 3)
+        phone = dict_parse.dict_parse(self, key_list, 3)
 
         return phone
 
-    def get_applyid(self,data):
-        applyid=data['applyId']
+    def get_applyid(self):
+        applyid=self['applyId']
 
         return applyid

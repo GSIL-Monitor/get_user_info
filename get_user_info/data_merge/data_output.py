@@ -11,6 +11,7 @@ from get_user_info.data_merge.send_email import EmailSend
 import time
 import logging
 from get_user_info.config import init_app
+from get_user_info.data_merge.data_center import data_center
 
 def out_put_run():
 
@@ -21,11 +22,9 @@ def out_put_run():
     #logger.info('to get m2_df begin')
     #m2_df=get_cif_M2()
     mongo_lrds=get_lrds_maindoc()
-    print(mongo_lrds)
 
-    key_list=['partyid','applyid','age','gender','marr','city','creditcard_num','loan_num','higest_quota',
-              'overdue_num','creditcard_userate','inquiry_num','contacts','td_score','zm_score','zm_atfscore',
-              'zm_watchlist','zm_risklist']
+
+    key_name=data_center({},'name')
 
     count=0
     data_soure=[]
@@ -39,19 +38,16 @@ def out_put_run():
         if count==500:
             #print(time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
             for item in data_soure:
-                merge_dict=data_merge(item)
-                print(merge_dict)
-                if merge_dict=='None':
+                key_value=data_center(item,'value')
+                if key_value is None:
                     continue
                 else:
-                    turn_list=[]
-                    for keys in key_list:
-                        turn_list.append(merge_dict[keys])
-                    result_list.append(turn_list)
+                    print(key_value)
+                    result_list.append(key_value)
             data_soure=[]
             count=0
 
-    all_info_df=pd.DataFrame(result_list,columns=key_list)
+    all_info_df=pd.DataFrame(result_list,columns=key_name)
 
     #选取最大applyID
     #applyid_df=all_info_df.groupby(all_info_df['partyid']).agg({'applyid':'max'}).reset_index()
@@ -70,19 +66,26 @@ def out_put_run():
 
 
 
+
 def email_task():
 
     score_df=out_put_run()
-    excel_writer=pd.ExcelWriter('/home/andpay/data/excel/get_user_info.xlsx',engine='xlsxwriter')
+    excel_writer=pd.ExcelWriter('/home/andpay/data/excel/get_user_info_2.xlsx',engine='xlsxwriter')
     score_df.to_excel(excel_writer,index=False)
     excel_writer.save()
 
     subject = 'get_user_info'
     to_addrs = ['kesheng.wang@andpay.me']
     body_text = 'get_user_info'
-    attachment_file = "/home/andpay/data/excel/get_user_info.xlsx"
+    attachment_file = "/home/andpay/data/excel/get_user_info_2.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
 
 
-out_put_run()
+'''
+table=out_put_run()
+
+excel_writer=pd.ExcelWriter('data.xlsx')
+table.to_excel(excel_writer,'info',index=False)
+excel_writer.save()
+'''

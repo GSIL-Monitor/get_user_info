@@ -10,54 +10,53 @@ import datetime as dt
 
 class mongo_additionalinfo():
 
-    def get_zmscore(self,data):
+    def get_zmscore(self):
         key_list = ['zmxyReport', 'data', 'zmScore']
-        zm_score = dict_parse.dict_parse(data, key_list, 3)
+        zm_score = dict_parse.dict_parse(self, key_list, 3)
 
         return zm_score
 
 
-    def get_zmatfscore(self,data):
+    def get_zmatfscore(self):
         key_list=['zmxyAntifraudScoreReport','data','score']
-        zmatfscore=dict_parse.dict_parse(data,key_list,3)
+        zmatfscore=dict_parse.dict_parse(self,key_list,3)
 
         return zmatfscore
 
 
-    def get_zmwatchlist(self,data):
+    def get_zmwatchlist(self):
         key_list=['zmxyWatchListReport','data','isMatched']
-        watchlist=dict_parse.dict_parse(data,key_list,3)
+        watchlist=dict_parse.dict_parse(self,key_list,3)
 
         return watchlist
 
 
-    def get_zmrisklist(self,data):
+    def get_zmrisklist(self):
         key_list=['zmxyAntifraudRiskListReport','data','hit']
-        risklist=dict_parse.dict_parse(data,key_list,3)
+        risklist=dict_parse.dict_parse(self,key_list,3)
 
         return risklist
 
 
-    def get_tdscore(self,data):
+    def get_tdscore(self):
         key_list=['tdReport','data','final_score']
-        td_score=dict_parse.dict_parse(data,key_list,3)
+        td_score=dict_parse.dict_parse(self,key_list,3)
 
         return td_score
 
 
-    def get_contact(self,data):
-        key_list=['partyInfo','data','partyMobileContacts','mobileContacts']
-        contact=dict_parse.dict_parse(data,key_list,4)
+    def get_brackbehavior(self):
+        key_list = ['partyInfo', 'data', 'partyBlackBehavior', 'count']
+        value = dict_parse.dict_parse(self, key_list, len(key_list))
 
-        if contact is None or contact=='None':
-            num=0
-        else:
-            num=len(contact)
-
-        return num
+        return value
 
 
+    def get_qhrskscore(self):
+        key_list=['qhRskdooReport','data','rskScore']
+        value=dict_parse.dict_parse(self,key_list,len(key_list))
 
+        return value
 
 
 '''
