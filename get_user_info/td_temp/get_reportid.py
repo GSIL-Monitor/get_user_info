@@ -44,7 +44,7 @@ def get_all_value(id_list):
         all_list.append([applyid,phone,reportid])
 
     result_df=pd.DataFrame(all_list,columns=['APPLYID','PHONE','REPORTID'])
-    print (result_df)
+
 
     return result_df
 
