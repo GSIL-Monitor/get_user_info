@@ -55,10 +55,9 @@ def get_all_value(id_list):
 def email_task():
 
     res_df = get_all_value(applyid)
-    end_df=pd.merge(party_df,res_df,on='APPLYID',how='outer')
-
+    
     excel_writer=pd.ExcelWriter('/home/andpay/data/excel/reportid.xlsx',engine='xlsxwriter')
-    end_df.to_excel(excel_writer,index=False)
+    res_df.to_excel(excel_writer,index=False)
     excel_writer.save()
 
     subject = 'relative_phone'
