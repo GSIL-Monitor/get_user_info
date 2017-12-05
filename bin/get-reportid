@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 
-from get_user_info.data_merge.data_output import email_task
+from get_user_info.td_temp.get_reportid import email_task
 email_task()
 
