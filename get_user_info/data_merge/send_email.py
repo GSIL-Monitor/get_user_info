@@ -38,7 +38,7 @@ class EmailSend(object):
                     msg.attach(part)
 
         ssl_flag = smtp_server_props.get('ssl', False)
-        timeout = smtp_server_props.get('timeout', 60)
+        timeout = smtp_server_props.get('timeout', 1000)
         if ssl_flag is True:
             server = smtplib.SMTP_SSL(host=smtp_server_props['server'], port=smtp_server_props['port'], timeout=timeout)
         else:
