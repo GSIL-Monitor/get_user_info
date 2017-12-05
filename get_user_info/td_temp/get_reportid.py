@@ -40,9 +40,11 @@ def get_all_value(id_list):
         phone=get_phone(item)
         reportid=get_reportid(item)
 
+        print([applyid,phone,reportid])
         all_list.append([applyid,phone,reportid])
 
     result_df=pd.DataFrame(all_list,columns=['APPLYID','PHONE','REPORTID'])
+    print (result_df)
 
     return result_df
 
@@ -65,4 +67,6 @@ def email_task():
     attachment_file = "/home/andpay/data/excel/reportid.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
+
+
 
