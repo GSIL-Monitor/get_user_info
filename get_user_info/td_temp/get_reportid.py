@@ -12,7 +12,7 @@ from get_user_info.data_merge.send_email import EmailSend
 path=os.path.dirname(__file__)
 path=path+'/partyid1.5.xlsx'
 party_df=pd.read_excel(path)
-applyid=list(party_df['APPLYID'])
+applyid=list(party_df['APPLYID'].astype(str))
 
 def get_phone(item):
     key_list=['loanApplyInfo','data','mobile']
