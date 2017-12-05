@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611be7e2-db84-4523-8edf-f5ca03c2b615" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/td_temp/partyid1.5.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/get-reportid.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/td_temp/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/get_user_info/data_merge/data.xlsx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST.in" afterPath="$PROJECT_DIR$/MANIFEST.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" afterPath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_merge/send_email.py" afterPath="$PROJECT_DIR$/get_user_info/data_merge/send_email.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/get-reportid.py" afterPath="$PROJECT_DIR$/bin/get-reportid.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,14 +16,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="get_reportid.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_reportid.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="35" lean-forward="true" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+            <state relative-caret-position="122">
+              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#37#100#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get-reportid.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/get-reportid.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,7 +129,6 @@
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/dict_parse.py" />
         <option value="$PROJECT_DIR$/get_user_info/get_phone/__init__.py" />
         <option value="$PROJECT_DIR$/bin/get-relative-phone.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" />
         <option value="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_txninfo.py" />
@@ -127,15 +140,16 @@
         <option value="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/send_email.py" />
         <option value="$PROJECT_DIR$/get_user_info/td_temp/__init__.py" />
-        <option value="$PROJECT_DIR$/bin/get-reportid.py" />
         <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" />
+        <option value="$PROJECT_DIR$/bin/get-reportid.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="117" />
-    <option name="y" value="155" />
+    <option name="x" value="-1264" />
+    <option name="y" value="147" />
     <option name="width" value="1400" />
     <option name="height" value="842" />
   </component>
@@ -193,24 +207,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="get_user_info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="td_temp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="get_user_info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="get_user_info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -246,7 +242,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_reportid">
+  <component name="RunManager" selected="Python.get-reportid">
     <configuration default="false" name="data_output" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,24 +256,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="get_user_info" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="get_mongo_collection" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/get_user_info/connect_database" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="get_user_info" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -332,6 +310,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="get_user_info" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="get-reportid" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bin" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="get_user_info" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bin/get-reportid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -403,18 +399,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.data_output" />
-      <item index="1" class="java.lang.String" itemvalue="Python.get_mongo_collection" />
-      <item index="2" class="java.lang.String" itemvalue="Python.get_phone" />
-      <item index="3" class="java.lang.String" itemvalue="Python.data_center" />
-      <item index="4" class="java.lang.String" itemvalue="Python.get_reportid" />
+      <item index="1" class="java.lang.String" itemvalue="Python.get_phone" />
+      <item index="2" class="java.lang.String" itemvalue="Python.data_center" />
+      <item index="3" class="java.lang.String" itemvalue="Python.get_reportid" />
+      <item index="4" class="java.lang.String" itemvalue="Python.get-reportid" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.get_reportid" />
-        <item index="1" class="java.lang.String" itemvalue="Python.data_output" />
-        <item index="2" class="java.lang.String" itemvalue="Python.data_center" />
-        <item index="3" class="java.lang.String" itemvalue="Python.get_phone" />
-        <item index="4" class="java.lang.String" itemvalue="Python.get_mongo_collection" />
+        <item index="0" class="java.lang.String" itemvalue="Python.get-reportid" />
+        <item index="1" class="java.lang.String" itemvalue="Python.get_reportid" />
+        <item index="2" class="java.lang.String" itemvalue="Python.data_output" />
+        <item index="3" class="java.lang.String" itemvalue="Python.data_center" />
+        <item index="4" class="java.lang.String" itemvalue="Python.get_phone" />
       </list>
     </recent_temporary>
   </component>
@@ -432,10 +428,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="117" y="155" width="1400" height="842" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1264" y="147" width="1400" height="842" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22974963" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22974963" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24585636" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -737,14 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -827,14 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/get-reportid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST.in">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -861,11 +840,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="35" lean-forward="true" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        <state relative-caret-position="122">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#37#100#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/get-reportid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
