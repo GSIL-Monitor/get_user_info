@@ -14,6 +14,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" afterPath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" afterPath="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" afterPath="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_helprepay_nodeal_userlist.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_helprepay_nodeal_userlist.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -85,6 +86,16 @@
               <folding>
                 <element signature="e#36#88#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +160,6 @@
         <option value="$PROJECT_DIR$/get_user_info/td_temp/__init__.py" />
         <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/bin/get-reportid.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/bin/get-reportid" />
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py" />
         <option value="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" />
@@ -159,6 +169,7 @@
         <option value="$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py" />
         <option value="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py" />
         <option value="$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -746,14 +757,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/get-reportid.py" />
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="77" lean-forward="false" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/get-relative-phone">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -819,14 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/get_phone/get_phone.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -865,6 +860,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding />
         </state>
       </provider>
