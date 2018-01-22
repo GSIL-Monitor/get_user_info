@@ -36,7 +36,7 @@ class DatabaseOperator():
         with session_scope(tx_mode=TxMode.NONE_TX, ns_server_id=self.ns_server_id) as session:
             batch_insert(table_name, insert_values)
     '''
-    
+
     # 批量更新记录
     def batch_update_record(self, batch_update_values, table_name, id):
         with session_scope(tx_mode=TxMode.NONE_TX, ns_server_id=self.ns_server_id) as session:
@@ -60,11 +60,13 @@ def get_week_day(date):
 def get_mobile_phone(partyId):
     init_app()
 
+    db=DatabaseOperator('/python/db/ac_cif_db')
+
     sql = '''
             select ao.corporateRepresentUserName phoneNumber from ac_cif_db.OrgParty ao
             where ao.partyId = :partyId
         '''
-    db = sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/python/db/ac_cif_db', max_size=-1)
+    #db = sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/python/db/ac_cif_db', max_size=-1)
     param = dict()
     param['partyId'] = partyId
     row_list = db.query_record(sql, params=param)
