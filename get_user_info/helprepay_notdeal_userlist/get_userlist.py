@@ -30,7 +30,7 @@ def get_mobile_phone(partyid):
 
     sql = '''
             select ao.corporateRepresentUserName phoneNumber from ac_cif_db.OrgParty ao
-            where ao.partyId = :partyId
+            where ao.partyId = :partyid
         '''
     db = sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/python/db/ac_cif_db', max_size=-1)
     param = dict()
