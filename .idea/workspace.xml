@@ -37,8 +37,8 @@
       <file leaf-file-name="get_userlist.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="-656">
+              <caret line="68" column="83" lean-forward="true" selection-start-line="68" selection-start-column="83" selection-end-line="68" selection-end-column="83" />
               <folding>
                 <element signature="e#36#77#0" expanded="true" />
               </folding>
@@ -871,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="-656">
+          <caret line="68" column="83" lean-forward="true" selection-start-line="68" selection-start-column="83" selection-end-line="68" selection-end-column="83" />
           <folding>
             <element signature="e#36#77#0" expanded="true" />
           </folding>

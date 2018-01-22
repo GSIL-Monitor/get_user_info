@@ -8,8 +8,8 @@ from datetime import datetime
 from get_user_info.data_merge.send_email import EmailSend
 import datetime as dt
 from ti_lnk.ti_lnk_client import TiLnkClient
-from ti_daf.sql_context import SqlContext, session_scope, iselect_rows_by_sql, select_rows_by_sql
-
+from ti_daf.sql_context import  select_rows_by_sql
+from ti_daf.sql_tx import session_scope
 
 class DatabaseOperator():
     def __init__(self, ns_config):
