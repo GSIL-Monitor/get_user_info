@@ -12,7 +12,7 @@ setup(name='get-user-info',
       zip_safe=False,
       test_suite='nose.collector',
       tests_require=['nose'],
-      scripts=['bin/get-user-info','bin/get-relative-phone','bin/get-reportid','bin/get_helprepay_nodeal_userlist'],
+      scripts=['bin/get-user-info','bin/get-relative-phone','bin/get-reportid','bin/get-helprepay-nodeal-userlist'],
       entry_points={
           'console_scripts': [],
       },

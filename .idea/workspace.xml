@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611be7e2-db84-4523-8edf-f5ca03c2b615" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/get_user_info/get_phone/partyid.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/get_user_info/td_temp/partyid1.5.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" afterPath="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py" afterPath="$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py" afterPath="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" afterPath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" afterPath="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" afterPath="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py" afterPath="$PROJECT_DIR$/bin/get-helprepay-nodeal-userlist.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_helprepay_nodeal_userlist.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py">
+      <file leaf-file-name="get-helprepay-nodeal-userlist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/get-helprepay-nodeal-userlist.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -856,10 +845,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py">
+    <entry file="file://$PROJECT_DIR$/bin/get-helprepay-nodeal-userlist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding />
         </state>
       </provider>
