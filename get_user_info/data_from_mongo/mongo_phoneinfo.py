@@ -66,9 +66,7 @@ class mongo_phoneinfo():
 
         first_layer=['succPhoneCallStats','callStatsIn6m','r008CallStatsIn3m','r009CallStatsIn3m','r010CallStatsIn3m']
 
-
         if return_para == 'name':
-
             key_name_list = []
             for item in first_layer:
                 key_name=['callCount','totalCallDuration']

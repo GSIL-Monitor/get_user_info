@@ -9,8 +9,6 @@ import logging
 
 def get_lrds_maindoc():
 
-
-
     init_app()
 
     mongodb_path_lrds = bootstrap.ti_config_service.get_value('get_user_info.mongodb_path_lrds', default='/db/mongodb/ac_lrds_db')

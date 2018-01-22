@@ -26,7 +26,7 @@ def get_cif_M2():
                 left join  dev_dw.f_loanrepayschedule b
                 on a.id=b.idloanagreement
                 where b.repaytime-b.duedate>33 or (b.repaytime is null and sysdate-b.duedate>33)
-              )y
+              ) y
               on x.partyid=y.pid
               where loantime<to_date('2017-09-01','yyyy-mm-dd') '''
 

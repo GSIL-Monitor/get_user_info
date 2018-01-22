@@ -9,7 +9,7 @@ from get_user_info.data_merge.send_email import EmailSend
 import os
 
 path=os.path.dirname(__file__)
-path=path+'/partyid.xlsx'
+#path=path+''
 party_df=pd.read_excel(path)
 party_list=list(party_df['PARTYID'])
 

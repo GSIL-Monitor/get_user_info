@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # encoding=utf-8
 
-
 from get_user_info.data_from_mongo.dict_parse import dict_parse
 import os
 import pandas as pd
@@ -9,10 +8,12 @@ from get_user_info.connect_database.get_mongo_collection import get_lrds_maindoc
 from get_user_info.config import init_app
 from get_user_info.data_merge.send_email import EmailSend
 
+
 path=os.path.dirname(__file__)
-path=path+'/partyid1.5.xlsx'
+path=path+''
 party_df=pd.read_excel(path)
 applyid=list(party_df['APPLYID'].astype(str))
+
 
 def get_phone(item):
     key_list=['loanApplyInfo','data','mobile']
@@ -45,20 +46,18 @@ def get_all_value(id_list):
 
     result_df=pd.DataFrame(all_list,columns=['APPLYID','PHONE','REPORTID'])
 
-
     return result_df
-
-
 
 
 
 def email_task():
 
     res_df = get_all_value(applyid)
-    
+
     excel_writer=pd.ExcelWriter('/home/andpay/data/excel/reportid.xlsx',engine='xlsxwriter')
     res_df.to_excel(excel_writer,index=False)
     excel_writer.save()
+
 
     subject = 'relative_phone'
     to_addrs = ['kesheng.wang@andpay.me']

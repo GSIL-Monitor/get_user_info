@@ -2,6 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611be7e2-db84-4523-8edf-f5ca03c2b615" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/get_user_info/get_phone/partyid.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/get_user_info/td_temp/partyid1.5.xlsx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" afterPath="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py" afterPath="$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py" afterPath="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" afterPath="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" afterPath="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" afterPath="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,63 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="get_reportid.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_reportid.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="57" column="4" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-              <folding>
-                <element signature="e#37#100#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get-reportid" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/get-reportid">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get-relative-phone" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/get-relative-phone">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="77" lean-forward="false" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get-user-info" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/get-user-info">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MANIFEST.in" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MANIFEST.in">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+            <state relative-caret-position="105">
+              <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -79,18 +38,62 @@
       <file leaf-file-name="get_phone.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_user_info/get_phone/get_phone.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="57" />
+            <state relative-caret-position="75">
+              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_mongo_collection.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py">
+      <file leaf-file-name="get_userlist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="667">
+              <caret line="117" column="41" lean-forward="true" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
+              <folding>
+                <element signature="e#36#77#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_helprepay_nodeal_userlist.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_mysql_collection.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mongo_basicinfo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_basicinfo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-112">
+              <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+              <folding>
+                <element signature="e#36#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get-user-info" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/get-user-info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -101,8 +104,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -133,35 +136,37 @@
         <option value="$PROJECT_DIR$/get_user_info/config/get-user-info/dev/logging.ini" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/main.py" />
         <option value="$PROJECT_DIR$/get_user_info/config/get-user-info/logging.ini" />
-        <option value="$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/data_merge.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/dict_parse.py" />
         <option value="$PROJECT_DIR$/get_user_info/get_phone/__init__.py" />
         <option value="$PROJECT_DIR$/bin/get-relative-phone.py" />
-        <option value="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" />
-        <option value="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_txninfo.py" />
-        <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_basicinfo.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_pcrinfo.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/data_center.py" />
-        <option value="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/send_email.py" />
         <option value="$PROJECT_DIR$/get_user_info/td_temp/__init__.py" />
         <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/bin/get-reportid.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/bin/get-reportid" />
+        <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py" />
+        <option value="$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py" />
+        <option value="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
+        <option value="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" />
         <option value="$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py" />
+        <option value="$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py" />
+        <option value="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py" />
+        <option value="$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="285" />
-    <option name="y" value="158" />
-    <option name="width" value="1400" />
-    <option name="height" value="842" />
+    <option name="x" value="176" />
+    <option name="y" value="90" />
+    <option name="width" value="1520" />
+    <option name="height" value="918" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -179,8 +184,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -217,24 +222,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="get_user_info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="td_temp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="get_user_info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="get_user_info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -248,15 +235,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/get_user_info/td_temp" />
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/get_user_info/get_phone" />
+      <recent name="$PROJECT_DIR$/get_user_info/connect_database" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/get_user_info/td_temp" />
       <recent name="$PROJECT_DIR$/get_user_info/data_from_mongo" />
       <recent name="$PROJECT_DIR$/get_user_info/data_merge" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/get_user_info/get_phone" />
-      <recent name="$PROJECT_DIR$/get_user_info/connect_database" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -271,7 +259,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_reportid">
+  <component name="RunManager" selected="Python.get_userlist">
     <configuration default="false" name="data_output" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -285,24 +273,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="get_user_info" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="get_phone" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/get_user_info/get_phone" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="get_user_info" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_user_info/get_phone/get_phone.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -357,6 +327,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="get_user_info" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bin/get-reportid" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="get_userlist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="get_user_info" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -428,18 +416,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.data_output" />
-      <item index="1" class="java.lang.String" itemvalue="Python.get_phone" />
-      <item index="2" class="java.lang.String" itemvalue="Python.data_center" />
-      <item index="3" class="java.lang.String" itemvalue="Python.get_reportid" />
-      <item index="4" class="java.lang.String" itemvalue="Python.get-reportid" />
+      <item index="1" class="java.lang.String" itemvalue="Python.data_center" />
+      <item index="2" class="java.lang.String" itemvalue="Python.get_reportid" />
+      <item index="3" class="java.lang.String" itemvalue="Python.get-reportid" />
+      <item index="4" class="java.lang.String" itemvalue="Python.get_userlist" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.get_reportid" />
-        <item index="1" class="java.lang.String" itemvalue="Python.get-reportid" />
-        <item index="2" class="java.lang.String" itemvalue="Python.data_output" />
-        <item index="3" class="java.lang.String" itemvalue="Python.data_center" />
-        <item index="4" class="java.lang.String" itemvalue="Python.get_phone" />
+        <item index="0" class="java.lang.String" itemvalue="Python.get_userlist" />
+        <item index="1" class="java.lang.String" itemvalue="Python.get_reportid" />
+        <item index="2" class="java.lang.String" itemvalue="Python.get-reportid" />
+        <item index="3" class="java.lang.String" itemvalue="Python.data_output" />
+        <item index="4" class="java.lang.String" itemvalue="Python.data_center" />
       </list>
     </recent_temporary>
   </component>
@@ -457,14 +445,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="285" y="158" width="1400" height="842" extended-state="0" />
+    <frame x="176" y="90" width="1520" height="918" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22974963" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22056833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24585636" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36049724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2025" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -522,19 +510,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="54" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/get_user_info/data_merge.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/pandas/core/indexes/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="565" column="26" lean-forward="true" selection-start-line="565" selection-start-column="26" selection-end-line="565" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2080">
@@ -672,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="93" column="25" lean-forward="false" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/pymongo/cursor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16050">
@@ -690,7 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,21 +687,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="30" lean-forward="false" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_pcrinfo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="22" column="82" lean-forward="false" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
-          <folding>
-            <element signature="e#37#89#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,41 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/data_output.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="58" column="12" lean-forward="false" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
-          <folding>
-            <element signature="e#36#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/send_email.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="48" column="53" lean-forward="false" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_basicinfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="e#36#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#36#88#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,9 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="e#36#109#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,9 +728,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/get-reportid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/get-reportid.py" />
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="77" lean-forward="false" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/get-relative-phone">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/get-reportid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_additionalinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="55" />
           <folding>
-            <element signature="e#36#109#0" expanded="true" />
+            <element signature="e#36#67#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="107" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/data_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,85 +809,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/connect_database/get_mongo_collection.py">
+    <entry file="file://$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_basicinfo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-112">
+          <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <element signature="e#36#88#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+    <entry file="file://$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        <state relative-caret-position="105">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/get_phone/get_phone.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="57" />
+        <state relative-caret-position="75">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/get-reportid">
+    <entry file="file://$PROJECT_DIR$/get_user_info/connect_database/get_mysql_collection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="90">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/get-reportid.py">
+    <entry file="file://$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/get-relative-phone">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="667">
+          <caret line="117" column="41" lean-forward="true" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
+          <folding>
+            <element signature="e#36#77#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/get-user-info">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="77" lean-forward="false" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/get-reportid">
+    <entry file="file://$PROJECT_DIR$/bin/get_helprepay_nodeal_userlist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/td_temp/get_reportid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="57" column="4" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-          <folding>
-            <element signature="e#37#100#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

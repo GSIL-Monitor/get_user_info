@@ -14,7 +14,6 @@ from get_user_info.config import init_app
 from get_user_info.data_merge.data_center import data_center
 
 def out_put_run():
-
     init_app()
     logger = logging.getLogger(__name__)
 
@@ -22,7 +21,6 @@ def out_put_run():
     #logger.info('to get m2_df begin')
     #m2_df=get_cif_M2()
     mongo_lrds=get_lrds_maindoc()
-
 
     key_name=data_center({},'name')
 
