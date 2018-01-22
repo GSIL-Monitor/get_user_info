@@ -8,7 +8,39 @@ from datetime import datetime
 from get_user_info.data_merge.send_email import EmailSend
 import datetime as dt
 from ti_lnk.ti_lnk_client import TiLnkClient
-from ti_daf.sql_context import SqlContext, session_scope, iselect_rows_by_sql
+from ti_daf.sql_context import SqlContext, session_scope, iselect_rows_by_sql, select_rows_by_sql
+
+
+class DatabaseOperator():
+    def __init__(self, ns_config):
+        init_app()
+        self.ns_server_id = ns_config
+
+    # 根据sql_text查询记录
+    def query_record(self, sql_text, return_type=None, params={}):
+        with session_scope(tx_mode=TxMode.NONE_TX, ns_server_id=self.ns_server_id) as session:
+            if return_type == 'List':
+                self.row_result = select_rows_by_sql(sql_text, params, max_size=-1)
+            else:
+                self.row_result = session.execute(sql_text,params)
+
+            return self.row_result
+    '''
+    # 删除主键对应的记录
+    def delete_record(self, table_name, id):
+        with session_scope(tx_mode=TxMode.NONE_TX, ns_server_id=self.ns_server_id) as session:
+            delete_by_id(table_name, id)
+
+    # 批量插入记录
+    def batch_insert_record(self, table_name, insert_values):
+        with session_scope(tx_mode=TxMode.NONE_TX, ns_server_id=self.ns_server_id) as session:
+            batch_insert(table_name, insert_values)
+    '''
+    
+    # 批量更新记录
+    def batch_update_record(self, batch_update_values, table_name, id):
+        with session_scope(tx_mode=TxMode.NONE_TX, ns_server_id=self.ns_server_id) as session:
+            sql_util.batch_update(table_name, id, batch_update_values)
 
 
 def get_week_day(date):
@@ -84,6 +116,7 @@ def nodeal_user():
         partyid_list.append(list(row))
 
     partyid_df=pd.DataFrame(partyid_list,columns=['partyid','applyid','repaymode','status','hasrepayamt'])
+    print(partyid_df)
 
     return partyid_df
 
