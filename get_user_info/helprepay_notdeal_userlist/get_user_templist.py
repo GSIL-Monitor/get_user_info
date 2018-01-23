@@ -47,7 +47,7 @@ def nodeal_user():
     init_app()
 
     sql=''' select  *  from
-            （
+            (
                 select pid,ids,repaymode,
                 case when  applystatus='O' and cancelflag=TRUE then '用户终止结清'
                      when  applystatus='O' and fallback=1  then '扣款失败结清'
@@ -67,7 +67,7 @@ def nodeal_user():
                     on a.applyinfoid=b.applyinfoid
                     where applytime>='2018-01-17' and applytime<'2018-01-22'
                 ) x
-            ）y
+            ) y
             where deal_status in ('用户终止结清','用户终止撤销','扣款失败撤销')
         '''
 
