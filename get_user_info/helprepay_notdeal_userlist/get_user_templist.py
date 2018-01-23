@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# encoding=utf-8
-
 from get_user_info.config import init_app
 from ti_daf import SqlTemplate, sql_util, TxMode
 import pandas as pd
@@ -10,6 +7,7 @@ import datetime as dt
 from ti_lnk.ti_lnk_client import TiLnkClient
 from ti_daf.sql_context import  select_rows_by_sql
 from ti_daf.sql_tx import session_scope
+
 
 class DatabaseOperator():
     def __init__(self, ns_config):
@@ -43,19 +41,46 @@ class DatabaseOperator():
             sql_util.batch_update(table_name, id, batch_update_values)
 
 
-def get_week_day(date):
-    week_day_dict = {
-        0: '星期一',
-        1: '星期二',
-        2: '星期三',
-        3: '星期四',
-        4: '星期五',
-        5: '星期六',
-        6: '星期天',
-    }
-    day = date.weekday()
-    return week_day_dict[day]
 
+def nodeal_user():
+
+    init_app()
+
+    sql=''' select  *  from
+            （
+                select pid,ids,repaymode,
+                case when  applystatus='O' and cancelflag=TRUE then '用户终止结清'
+                     when  applystatus='O' and fallback=1  then '扣款失败结清'
+                     when  applystatus='O' then '正常结清'
+                     when  applystatus='C' and cancelflag=TRUE then '用户终止撤销'
+                     when  applystatus='C' then '扣款失败撤销'
+                     else  '未结清' end  deal_status
+                from  
+                (
+                    select  a.applyinfoid ids,a.partyid pid,a.applystatus,a.repaymode,
+                            json_extract(a.applydata,'$.issuerName') bank,
+                            json_extract(txndata,'$.customLine') ctline,
+                            json_extract(txndata,'$.userCancelFlag') cancelflag,
+                            b.fallback,b.status,b.repayamt,b.payedamt,b.hasrepayamt
+                    from ac_bts_db.ApplyInfo a
+                    left join ac_bts_db.InsteadRepayTxnCtrl b
+                    on a.applyinfoid=b.applyinfoid
+                    where applytime>='2018-01-17' and applytime<'2018-01-22'
+                ) x
+            ）y
+            where deal_status in ('用户终止结清','用户终止撤销','扣款失败撤销')
+        '''
+
+
+    sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/mysql/ac_bts_db',max_size=-1)
+
+    partyid_list=[]
+    for row in sql_row:
+        partyid_list.append(list(row))
+
+    partyid_df=pd.DataFrame(partyid_list,columns=['partyid','applyid','repaymode','status'])
+
+    return partyid_df
 
 def get_mobile_phone(partyId):
     init_app()
@@ -84,44 +109,6 @@ def get_mobile_phone(partyId):
     return user['userName']
 
 
-
-def nodeal_user():
-
-    init_app()
-
-    today = datetime.date(datetime.today())
-    today_s="'"+str(today)+"'"
-
-    week_day = get_week_day(today)
-    week_list = ['星期二', '星期三', '星期四', '星期五']
-
-
-    if week_day in week_list:
-        time = today - dt.timedelta(days=1)
-    elif week_day=='星期一':
-        time = today - dt.timedelta(days=3)
-
-    time_s = "'" + str(time) + "'"
-
-    sql=''' select  a.partyid,a.applyinfoid,a.repaymode,b.status,b.hasrepayamt
-            from ac_bts_db.ApplyInfo a
-            left join ac_bts_db.InsteadRepayTxnCtrl b
-            on a.applyinfoid=b.applyinfoid
-            where  a.applystatus<>'O' and a.applytime>='''+time_s+''' 
-            and a.applytime<'''+today_s
-
-
-    sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/mysql/ac_bts_db',max_size=-1)
-
-    partyid_list=[]
-    for row in sql_row:
-        partyid_list.append(list(row))
-
-    partyid_df=pd.DataFrame(partyid_list,columns=['partyid','applyid','repaymode','status','hasrepayamt'])
-
-    return partyid_df
-
-
 def data_merge(user_df):
     user_list=list(user_df['partyid'])
 
@@ -135,7 +122,6 @@ def data_merge(user_df):
     end_df=pd.merge(user_df,phone_df,on='partyid',how='left')
 
     return end_df
-
 
 
 def email_task():
