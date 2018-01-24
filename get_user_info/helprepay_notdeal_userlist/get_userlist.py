@@ -142,6 +142,7 @@ def email_task():
 
     nodeal_df=nodeal_user()
     res_df = data_merge(nodeal_df)
+    res_df = res_df.drop_duplicates(subset=['partyid', 'applyid', 'repaymode', 'status', 'phone_number'])
 
     excel_writer=pd.ExcelWriter('/home/andpay/data/excel/helprepay_nodeal_userlist.xlsx',engine='xlsxwriter')
     res_df.to_excel(excel_writer,index=False)
