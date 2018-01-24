@@ -103,13 +103,31 @@ def nodeal_user():
 
     time_s = "'" + str(time) + "'"
 
-    sql=''' select  a.partyid,a.applyinfoid,a.repaymode,b.status,b.hasrepayamt
-            from ac_bts_db.ApplyInfo a
-            left join ac_bts_db.InsteadRepayTxnCtrl b
-            on a.applyinfoid=b.applyinfoid
-            where  a.applystatus<>'O' and a.applytime>='''+time_s+''' 
-            and a.applytime<'''+today_s
 
+    sql=''' select  *  from
+            (
+                select pid,ids,repaymode,
+                case when  applystatus='O' and cancelflag=TRUE then '用户终止结清'
+                     when  applystatus='O' and fallback=1  then '扣款失败结清'
+                     when  applystatus='O' then '正常结清'
+                     when  applystatus='C' and cancelflag=TRUE then '用户终止撤销'
+                     when  applystatus='C' then '扣款失败撤销'
+                     else  '未结清' end  deal_status
+                from  
+                (
+                    select  a.applyinfoid ids,a.partyid pid,a.applystatus,a.repaymode,
+                            json_extract(a.applydata,'$.issuerName') bank,
+                            json_extract(txndata,'$.customLine') ctline,
+                            json_extract(txndata,'$.userCancelFlag') cancelflag,
+                            b.fallback,b.status,b.repayamt,b.payedamt,b.hasrepayamt
+                    from ac_bts_db.ApplyInfo a
+                    left join ac_bts_db.InsteadRepayTxnCtrl b
+                    on a.applyinfoid=b.applyinfoid
+                    where applytime>='''+time_s+'''  and applytime<'''+today_s+'''
+                ) x
+            ) y
+            where deal_status in ('用户终止结清','用户终止撤销','扣款失败撤销')
+        '''
 
     sql_row=sql_util.select_rows_by_sql(sql_text=sql,sql_paras={},ns_server_id='/db/mysql/ac_bts_db',max_size=-1)
 
@@ -117,7 +135,7 @@ def nodeal_user():
     for row in sql_row:
         partyid_list.append(list(row))
 
-    partyid_df=pd.DataFrame(partyid_list,columns=['partyid','applyid','repaymode','status','hasrepayamt'])
+    partyid_df=pd.DataFrame(partyid_list,columns=['partyid','applyid','repaymode','status'])
 
     return partyid_df
 
@@ -150,7 +168,7 @@ def email_task():
 
 
     subject = 'helprepay_nodeal_userlist'
-    to_addrs = ['kesheng.wang@andpay.me']
+    to_addrs = ['liping.peng@andpay.me','kesheng.wang@andpay.me']
     body_text = 'helprepay_nodeal_userlist'
     attachment_file = "/home/andpay/data/excel/helprepay_nodeal_userlist.xlsx"
 
