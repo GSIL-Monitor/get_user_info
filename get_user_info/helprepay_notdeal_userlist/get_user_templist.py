@@ -65,7 +65,7 @@ def nodeal_user():
                     from ac_bts_db.ApplyInfo a
                     left join ac_bts_db.InsteadRepayTxnCtrl b
                     on a.applyinfoid=b.applyinfoid
-                    where applytime>='2018-01-17' and applytime<'2018-01-22'
+                    where applytime>='2018-01-22' and applytime<'2018-01-24'
                 ) x
             ) y
             where deal_status in ('用户终止结清','用户终止撤销','扣款失败撤销')
@@ -128,6 +128,7 @@ def email_task():
 
     nodeal_df=nodeal_user()
     res_df = data_merge(nodeal_df)
+    res_df = res_df.drop_duplicates(subset=['partyid', 'applyid', 'repaymode', 'status','phone_number'])
 
     excel_writer=pd.ExcelWriter('/home/andpay/data/excel/helprepay_nodeal_userlist.xlsx',engine='xlsxwriter')
     res_df.to_excel(excel_writer,index=False)
