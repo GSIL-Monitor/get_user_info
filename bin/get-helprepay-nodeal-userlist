@@ -2,5 +2,7 @@
 
 from get_user_info.helprepay_notdeal_userlist.get_userlist import email_task as email_1
 from get_user_info.helprepay_notdeal_userlist.get_user_templist import email_task as email_2
+from get_user_info.helprepay_notdeal_userlist.get_noapply_userphone import email_task as email_3
 
-email_1()
+
+email_3()

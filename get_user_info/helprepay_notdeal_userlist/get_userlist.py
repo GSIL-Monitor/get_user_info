@@ -25,6 +25,7 @@ class DatabaseOperator():
                 self.row_result = session.execute(sql_text,params)
 
             return self.row_result
+
     '''
     # 删除主键对应的记录
     def delete_record(self, table_name, id):
@@ -100,6 +101,8 @@ def nodeal_user():
         time = today - dt.timedelta(days=1)
     elif week_day=='星期一':
         time = today - dt.timedelta(days=3)
+    else:
+        time=today
 
     time_s = "'" + str(time) + "'"
 
@@ -159,17 +162,20 @@ def data_merge(user_df):
 def email_task():
 
     nodeal_df=nodeal_user()
-    res_df = data_merge(nodeal_df)
-    res_df = res_df.drop_duplicates(subset=['partyid', 'applyid', 'repaymode', 'status', 'phone_number'])
+    if nodeal_df.shape[0]==0:
+        pass
+    else:
+        res_df = data_merge(nodeal_df)
+        res_df = res_df.drop_duplicates(subset=['partyid', 'applyid', 'repaymode', 'status', 'phone_number'])
 
-    excel_writer=pd.ExcelWriter('/home/andpay/data/excel/helprepay_nodeal_userlist.xlsx',engine='xlsxwriter')
-    res_df.to_excel(excel_writer,index=False)
-    excel_writer.save()
+        excel_writer=pd.ExcelWriter('/home/andpay/data/excel/helprepay_nodeal_userlist.xlsx',engine='xlsxwriter')
+        res_df.to_excel(excel_writer,index=False)
+        excel_writer.save()
 
 
-    subject = 'helprepay_nodeal_userlist'
-    to_addrs = ['liping.peng@andpay.me','kesheng.wang@andpay.me']
-    body_text = 'helprepay_nodeal_userlist'
-    attachment_file = "/home/andpay/data/excel/helprepay_nodeal_userlist.xlsx"
+        subject = 'helprepay_nodeal_userlist'
+        to_addrs = ['liping.peng@andpay.me','kesheng.wang@andpay.me']
+        body_text = 'helprepay_nodeal_userlist'
+        attachment_file = "/home/andpay/data/excel/helprepay_nodeal_userlist.xlsx"
 
-    EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
+        EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
