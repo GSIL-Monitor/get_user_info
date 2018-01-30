@@ -50,7 +50,7 @@ def nodeal_user():
             from ac_bts_db.ApplyInfo
           '''
 
-    user_row = sql_util.select_rows_by_sql(sql_text=sql_1, sql_paras={}, ns_server_id='/python/db/ac_bts_db',
+    user_row = sql_util.select_rows_by_sql(sql_text=sql_1, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db',
                                            max_size=-1)
 
     user_list = []
@@ -66,7 +66,7 @@ def nodeal_user():
             where a.authNetId  in ('08470009-00', '08470010-00')  and  a.status='1'  and a.crttime<'2018-01-30'
             and b.merchantCustomerId not in''' + user_list
 
-    result_row = sql_util.select_rows_by_sql(sql_text=sql_2, sql_paras={}, ns_server_id='/python/db/ac_bts_db',
+    result_row = sql_util.select_rows_by_sql(sql_text=sql_2, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db',
                                              max_size=-1)
 
     result_list = []
@@ -111,7 +111,7 @@ def nodeal_user():
             on a.partyid=e.txnpartyid 
             where a.partyid in ''' + result_list1 + ''' or a.partyid in ''' + result_list2
 
-    oracle_row = sql_util.select_rows_by_sql(sql_text=sql_3, sql_paras={}, ns_server_id='/python/db/dev_dw_db',
+    oracle_row = sql_util.select_rows_by_sql(sql_text=sql_3, sql_paras={}, ns_server_id='/db/oracle/dev_dw_db',
                                              max_size=-1)
 
     user_info = []
