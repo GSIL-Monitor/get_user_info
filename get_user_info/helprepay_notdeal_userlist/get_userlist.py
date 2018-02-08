@@ -11,6 +11,7 @@ from ti_lnk.ti_lnk_client import TiLnkClient
 from ti_daf.sql_context import  select_rows_by_sql
 from ti_daf.sql_tx import session_scope
 
+
 class DatabaseOperator():
     def __init__(self, ns_config):
         init_app()
