@@ -56,4 +56,3 @@ def get_psns_phonecontact():
     return collection
 
 
-get_cif_partyadditioninfo()

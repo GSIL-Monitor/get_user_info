@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+from get_user_info.email_task.helprepay_rulehit import email_task
+email_task()
+
+
