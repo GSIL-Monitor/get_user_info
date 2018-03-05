@@ -371,9 +371,9 @@ def email_task():
 
     excel_writer.save()
 
-    subject = 'helprepay_nodeal_userlist'
-    to_addrs = ['kesheng.wang@andpay.me']
-    body_text = 'helprepay_nodeal_userlist'
+    subject = 'helprepay_rulehit'
+    to_addrs = ['kesheng.wang@andpay.me','yiao.chen@andpay.me','hao.sun@andpay.me','sea.bao@andpay.me']
+    body_text = 'helprepay_rulehit'
     attachment_file = "/home/andpay/data/excel/helprepay_rulehit.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
