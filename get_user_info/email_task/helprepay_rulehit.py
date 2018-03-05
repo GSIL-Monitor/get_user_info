@@ -56,7 +56,7 @@ def get_allrule_hit():
              else  rulename  end 
          '''
 
-    rule_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/dev_dw_db', max_size=-1)
+    rule_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/oracle/dev_dw_db', max_size=-1)
 
     rule_list = []
     for row in rule_row:
@@ -70,7 +70,7 @@ def get_allrule_hit():
     sql_rule = '''select rule_name,rule_code from helprepay_rule '''
 
     # db= SqlContext('/python/db/scratch')
-    map_row = sql_util.select_rows_by_sql(sql_text=sql_rule, sql_paras={}, ns_server_id='/python/db/scratch_db',
+    map_row = sql_util.select_rows_by_sql(sql_text=sql_rule, sql_paras={}, ns_server_id='/db/oracle/scratch_db',
                                           max_size=-1)
 
     map_list = []
@@ -161,7 +161,7 @@ def get_siglerule_hit():
 
         '''
 
-    sigle_rule_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/dev_dw_db',
+    sigle_rule_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/oracle/dev_dw_db',
                                                  max_size=-1)
 
     rule_list = []
@@ -176,7 +176,7 @@ def get_siglerule_hit():
     sql_rule = '''select rule_name,rule_code from helprepay_rule '''
 
     # db= SqlContext('/python/db/scratch')
-    map_row = sql_util.select_rows_by_sql(sql_text=sql_rule, sql_paras={}, ns_server_id='/python/db/scratch_db',
+    map_row = sql_util.select_rows_by_sql(sql_text=sql_rule, sql_paras={}, ns_server_id='/db/oracle/scratch_db',
                                           max_size=-1)
 
     map_list = []
@@ -227,7 +227,7 @@ def get_tryrule_hit():
              else rulename end
         '''
 
-    try_rule_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/dev_dw_db',
+    try_rule_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/oracle/dev_dw_db',
                                                max_size=-1)
 
     try_rule_list = []
@@ -241,7 +241,7 @@ def get_tryrule_hit():
     sql_rule = '''select rule_name,rule_code from helprepay_rule '''
 
     # db= SqlContext('/python/db/scratch')
-    map_row = sql_util.select_rows_by_sql(sql_text=sql_rule, sql_paras={}, ns_server_id='/python/db/scratch_db',
+    map_row = sql_util.select_rows_by_sql(sql_text=sql_rule, sql_paras={}, ns_server_id='/db/oracle/scratch_db',
                                           max_size=-1)
 
     map_list = []
@@ -298,7 +298,7 @@ def get_rulecategroy():
         on x.days=y.days
         '''
 
-    categroy_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/dev_dw_db',
+    categroy_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/oracle/dev_dw_db',
                                                max_size=-1)
 
     categroy_list = []
