@@ -27,8 +27,8 @@
       <file leaf-file-name="helprepay_rulehit.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_user_info/email_task/helprepay_rulehit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="39" column="11" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="39" selection-end-column="11" />
+            <state relative-caret-position="265">
+              <caret line="371" column="23" lean-forward="true" selection-start-line="371" selection-start-column="23" selection-end-line="371" selection-end-column="23" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
@@ -152,8 +152,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="175" />
-    <option name="y" value="58" />
+    <option name="x" value="2" />
+    <option name="y" value="78" />
     <option name="width" value="1471" />
     <option name="height" value="941" />
   </component>
@@ -407,13 +407,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="175" y="58" width="1471" height="941" extended-state="0" />
+    <frame x="2" y="78" width="1471" height="941" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23862842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35236937" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32442284" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2560606" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -846,8 +846,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/email_task/helprepay_rulehit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="39" column="11" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="39" selection-end-column="11" />
+        <state relative-caret-position="265">
+          <caret line="371" column="23" lean-forward="true" selection-start-line="371" selection-start-column="23" selection-end-line="371" selection-end-column="23" />
           <folding>
             <element signature="e#1#40#0" expanded="true" />
           </folding>
