@@ -1,4 +1,3 @@
-
 from ti_daf import SqlTemplate,sql_util
 import pandas as pd
 from datetime import datetime
@@ -372,7 +371,7 @@ def email_task():
     excel_writer.save()
 
     subject = '帮还风控数据'
-    to_addrs = ['kesheng.wang@andpay.me']
+    to_addrs = ['kesheng.wang@andpay.me', 'yiao.chen@andpay.me', 'hao.sun@andpay.me', 'sea.bao@andpay.me']
     #['kesheng.wang@andpay.me', 'yiao.chen@andpay.me', 'hao.sun@andpay.me', 'sea.bao@andpay.me']
     body_text = 'helprepay_rulehit'
     attachment_file = "/home/andpay/data/excel/helprepay_rulehit.xlsx"
