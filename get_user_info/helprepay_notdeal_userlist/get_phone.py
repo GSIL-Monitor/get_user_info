@@ -7,7 +7,7 @@ import datetime as dt
 from ti_lnk.ti_lnk_client import TiLnkClient
 from ti_daf.sql_context import  select_rows_by_sql
 from ti_daf.sql_tx import session_scope
-
+import os
 
 class DatabaseOperator():
     def __init__(self, ns_config):
@@ -84,8 +84,10 @@ def data_merge(user_df):
 
 
 def email_task():
+    path = os.path.dirname(__file__)
+    path=path+'/partyid_list200.xlsx'
 
-    nodeal_df=pd.read_excel('partyid_list200.xlsx')
+    nodeal_df=pd.read_excel(path)
     res_df = data_merge(nodeal_df)
 
 
