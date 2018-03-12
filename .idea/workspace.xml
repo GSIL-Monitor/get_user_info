@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611be7e2-db84-4523-8edf-f5ca03c2b615" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/partyid_list200.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_phone.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/get-relative-phone" afterPath="$PROJECT_DIR$/bin/get-relative-phone" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST.in" afterPath="$PROJECT_DIR$/MANIFEST.in" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,11 +80,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get-relative-phone" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get-relative-phone" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/get-relative-phone">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MANIFEST.in" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="60" lean-forward="true" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -139,7 +146,6 @@
         <option value="$PROJECT_DIR$/get_user_info/data_merge/data_center.py" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/send_email.py" />
         <option value="$PROJECT_DIR$/get_user_info/td_temp/__init__.py" />
-        <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/bin/get-reportid.py" />
         <option value="$PROJECT_DIR$/bin/get-reportid" />
         <option value="$PROJECT_DIR$/get_user_info/data_merge/data_output.py" />
@@ -164,6 +170,7 @@
         <option value="$PROJECT_DIR$/get_user_info/data_from_mongo/mongo_phoneinfo.py" />
         <option value="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_phone.py" />
         <option value="$PROJECT_DIR$/bin/get-relative-phone" />
+        <option value="$PROJECT_DIR$/MANIFEST.in" />
       </list>
     </option>
   </component>
@@ -694,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/get-helprepay-nodeal-userlist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -899,6 +899,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="60" lean-forward="true" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
           <folding />
         </state>
       </provider>

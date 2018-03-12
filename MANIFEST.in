@@ -3,3 +3,4 @@ recursive-include get_user_info/data_from_mongo *
 recursive-include get_user_info/config/get-user-info *
 recursive-include get_user_info/get_phone *
 recursive-include get_user_info/td_temp *
+recursive-include get_user_info/helprepay_notdeal_userlist *
