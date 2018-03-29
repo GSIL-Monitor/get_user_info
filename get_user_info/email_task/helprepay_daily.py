@@ -88,7 +88,7 @@ def get_basicdata():
         '''
 
 
-    day_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db', max_size=-1)
+    day_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db', max_size=-1)
 
     day_list = []
     for row in day_row:
@@ -144,7 +144,7 @@ def get_basicdata():
             group by date_format(x.ctime,'%Y-%m-%d')
             '''
 
-        card_row = sql_util.select_rows_by_sql(sql_text=sql_1, sql_paras={}, ns_server_id='/python/db/ac_agw_db',
+        card_row = sql_util.select_rows_by_sql(sql_text=sql_1, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db',
                                                max_size=-1)
 
         for row in card_row:
@@ -264,7 +264,7 @@ def get_helpdata():
         on xx.days=zz.days
         '''
 
-    help_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db', max_size=-1)
+    help_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db', max_size=-1)
 
     help_list = []
     for row in help_row:
@@ -365,7 +365,7 @@ def get_circledata():
         on xx.days=zz.days
         '''
 
-    circle_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db',
+    circle_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db',
                                              max_size=-1)
 
     circle_list = []
@@ -436,7 +436,7 @@ def get_loanafterdata():
         ) xx
         '''
 
-    afterloan_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db',
+    afterloan_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db',
                                                 max_size=-1)
 
     afterloan_list = []
@@ -488,7 +488,7 @@ def get_funneldata():
         where lastlogintime<''' + today_s + ''' and lastlogintime>=''' + yesterday_s + '''
         group by  case when sysdate-registertime<30 and HASCLEARREPAY=0  then  'new_u' else 'old_u' end '''
 
-    card_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/dev_dw_db', max_size=-1)
+    card_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/oracle/dev_dw_db', max_size=-1)
 
     card_list = []
     for row in card_row:
@@ -573,7 +573,7 @@ def get_checkdetail():
         and a.applytime>=''' + org_day_s + ''' and a.applytime<''' + today_s + '''
         '''
 
-    sql_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db', max_size=-1)
+    sql_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db', max_size=-1)
 
     data_list = []
     for row in sql_row:
@@ -616,7 +616,7 @@ def get_failreason():
         errorcode,errormsg
         '''
 
-    sql_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db', max_size=-1)
+    sql_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/db/mysql/ac_bts_db', max_size=-1)
 
     fail_list = []
     for row in sql_row:
