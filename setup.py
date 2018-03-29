@@ -13,7 +13,7 @@ setup(name='get-user-info',
       test_suite='nose.collector',
       tests_require=['nose'],
       scripts=['bin/get-user-info','bin/get-relative-phone','bin/get-reportid','bin/get-helprepay-nodeal-userlist',
-               'bin/helprepay-rulehit-task','bin/helprepay-daily-task'],
+               'bin/helprepay-rulehit-task','bin/helprepay-daily-task',],
       entry_points={
           'console_scripts': [],
       },
