@@ -24,7 +24,7 @@ class DatabaseOperator():
                 self.row_result = session.execute(sql_text,params)
 
             return self.row_result
-        
+
     '''
     # 删除主键对应的记录
     def delete_record(self, table_name, id):
@@ -69,7 +69,10 @@ def get_mobile_phone(partyId):
     service_id = 'me.andpay.ac.ums.api.UserManagementService'
     user = TiLnkClient.call_lnk_srv(service_group, service_id, 'getUserByUserName', phone_num, ns_server_id=None)
 
-    return user['userName']
+    if user is None:
+        return 0
+    else:
+        return user['userName']
 
 
 def data_merge(user_df):
