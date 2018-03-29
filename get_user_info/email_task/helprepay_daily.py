@@ -679,7 +679,7 @@ def email_task():
     format_list = [format1, format2, format3, format4, format5, format6, format7]
     df_list = [end_day_df, help_df, circle_df, afterloan_df, funnel_df, repay_df, fail_df]
 
-    excel_writer = pd.ExcelWriter('/data/excel/helprepay_report.xlsx', engine='xlsxwriter')
+    excel_writer = pd.ExcelWriter('/home/andpay/data/excel/helprepay_report.xlsx', engine='xlsxwriter')
     for sheet_name, format, df in zip(name_list, format_list, df_list):
         excel_writer = excel_format(excel_writer, df, sheet_name=sheet_name, format_dict=format)
 
@@ -695,6 +695,6 @@ def email_task():
     '''
     to_addrs = ['kesheng.wang@andpay.me']
     body_text = 'Helprepay_Report'
-    attachment_file = "/data/excel/helprepay_report.xlsx"
+    attachment_file = "/home/andpay/data/excel/helprepay_report.xlsx"
 
     EmailSend.send_email(subject, to_addrs, body_text, attachment_files=[attachment_file])
