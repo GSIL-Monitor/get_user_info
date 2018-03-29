@@ -371,7 +371,8 @@ def email_task():
     excel_writer.save()
 
     subject = '帮还风控数据'
-    to_addrs = ['kesheng.wang@andpay.me', 'yiao.chen@andpay.me', 'hao.sun@andpay.me', 'sea.bao@andpay.me']
+    to_addrs = ['feng.feng@andpay.me','youkun.xie@andpay.me','kesheng.wang@andpay.me', 'yiao.chen@andpay.me',
+                'hao.sun@andpay.me', 'sea.bao@andpay.me']
     #['kesheng.wang@andpay.me', 'yiao.chen@andpay.me', 'hao.sun@andpay.me', 'sea.bao@andpay.me']
     body_text = 'helprepay_rulehit'
     attachment_file = "/home/andpay/data/excel/helprepay_rulehit.xlsx"
