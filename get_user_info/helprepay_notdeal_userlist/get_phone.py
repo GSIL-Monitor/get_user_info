@@ -14,6 +14,7 @@ class DatabaseOperator():
         init_app()
         self.ns_server_id = ns_config
 
+
     # 根据sql_text查询记录
     def query_record(self, sql_text, return_type=None, params={}):
         with session_scope(tx_mode=TxMode.NONE_TX, ns_server_id=self.ns_server_id) as session:
@@ -23,6 +24,7 @@ class DatabaseOperator():
                 self.row_result = session.execute(sql_text,params)
 
             return self.row_result
+        
     '''
     # 删除主键对应的记录
     def delete_record(self, table_name, id):
