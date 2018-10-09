@@ -1085,8 +1085,8 @@ def get_m2_df():
 
     return M2_df
 
-def get_end_rule_df():
 
+def get_end_rule_df():
     today = datetime.date(datetime.today())
 
     begin_time = str(today - dt.timedelta(days=60))
@@ -1237,12 +1237,12 @@ def email_send():
 
     subject = '信用通业务日报'
 
-    to_addrs = ['fan.chen@andpay.me', 'youkun.xie@andpay.me', 'xiaofei.xiong@andpay.me', 'feng.feng@andpay.me',
-                'hao.sun@andpay.me', 'kesheng.wang@andpay.me', 'shenglu.chen@andpay.me', 'stephanie.shao@andpay.me',
-                'liping.peng@andpay.me', 'sea.bao@andpay.me']
+    # to_addrs = ['fan.chen@andpay.me', 'youkun.xie@andpay.me', 'xiaofei.xiong@andpay.me', 'feng.feng@andpay.me',
+    #             'hao.sun@andpay.me', 'kesheng.wang@andpay.me', 'shenglu.chen@andpay.me', 'stephanie.shao@andpay.me',
+    #             'liping.peng@andpay.me', 'sea.bao@andpay.me']
 
 
-    # to_addrs = ['kesheng.wang@andpay.me']
+    to_addrs = ['kesheng.wang@andpay.me']
     body_text = 'Daily_Report'
     attachment_file = "/home/andpay/data/excel/daily_report.xlsx"
 
