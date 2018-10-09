@@ -53,6 +53,10 @@ def get_psns_phonecontact():
 
     collection = db.get_collection("phoneContacts")
 
+    for i in collection.find(no_cursor_timeout=True):
+        print(i)
+
     return collection
 
 
+get_psns_phonecontact()

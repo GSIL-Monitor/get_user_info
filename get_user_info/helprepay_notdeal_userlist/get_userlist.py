@@ -12,6 +12,7 @@ from ti_daf.sql_context import  select_rows_by_sql
 from ti_daf.sql_tx import session_scope
 
 
+
 class DatabaseOperator():
     def __init__(self, ns_config):
         init_app()
@@ -26,6 +27,7 @@ class DatabaseOperator():
                 self.row_result = session.execute(sql_text,params)
 
             return self.row_result
+
 
     '''
     # 删除主键对应的记录
@@ -43,6 +45,7 @@ class DatabaseOperator():
     def batch_update_record(self, batch_update_values, table_name, id):
         with session_scope(tx_mode=TxMode.NONE_TX, ns_server_id=self.ns_server_id) as session:
             sql_util.batch_update(table_name, id, batch_update_values)
+
 
 
 def get_week_day(date):
@@ -84,6 +87,7 @@ def get_mobile_phone(partyId):
     user = TiLnkClient.call_lnk_srv(service_group, service_id, 'getUserByUserName', phone_num, ns_server_id=None)
 
     return user['userName']
+
 
 
 
@@ -142,6 +146,7 @@ def nodeal_user():
     partyid_df=pd.DataFrame(partyid_list,columns=['partyid','applyid','repaymode','status'])
 
     return partyid_df
+
 
 
 def data_merge(user_df):

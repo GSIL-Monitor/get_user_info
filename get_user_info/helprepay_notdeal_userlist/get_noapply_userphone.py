@@ -23,6 +23,7 @@ class DatabaseOperator():
                 self.row_result = session.execute(sql_text,params)
 
             return self.row_result
+
     '''
     # 删除主键对应的记录
     def delete_record(self, table_name, id):
@@ -45,7 +46,6 @@ class DatabaseOperator():
 def nodeal_user():
 
     init_app()
-
     sql_1 = '''select distinct partyid   
             from ac_bts_db.ApplyInfo
           '''

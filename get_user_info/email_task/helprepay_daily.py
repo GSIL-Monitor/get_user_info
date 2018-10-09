@@ -629,6 +629,261 @@ def get_failreason():
     return fail_df
 
 
+def get_xygjdata():
+    init_app()
+
+    today = datetime.date(datetime.today())
+    origin_day = today - dt.timedelta(days=59)
+
+    today_s = "'" + str(today) + "'"
+    origin_day_s = "'" + str(origin_day) + "'"
+
+    sql = '''
+        select uu.register_count,xx.*,yy.loanamt,yy.new_loanamt,yy.old_loanamt,zz.backamt from 
+        ( 
+            select date_format(applytime,'%Y-%m-%d') days,count(distinct a.applyinfoid)  apply_num,
+            count(distinct case when repaymode=0 then a.applyinfoid end)  help_num,
+            count(distinct case when repaymode=1 then a.applyinfoid end)  circle_num,
+            count(distinct case when e.deal_status='用户终止撤销' then a.applyinfoid end)  usercancel_num,
+            count(distinct case when e.deal_status='首笔失败撤销' then a.applyinfoid end)  firstcancel_num,
+            count(distinct case when e.deal_status='用户终止结清' then a.applyinfoid end)  usersettle_num,
+            count(distinct case when e.deal_status='中途失败结清' then a.applyinfoid end)  midfailsettle_num,
+            count(distinct case when e.deal_status='全额结清'  then a.applyinfoid end)  fullamountsettle_num,
+            count(distinct case when e.deal_status='其他' then a.applyinfoid end)  other_num,
+            count(distinct case when e.deal_status='逾期中' then a.applyinfoid end )   overdue_num
+            from ac_bts_db.ApplyInfo a
+            left join ac_bts_db.InsteadRepayTxnCtrl b
+            on a.applyinfoid=b.applyinfoid
+            left join ac_bts_db.InsteadRepaySchedule c
+            on b.insteadrepaytxnctrlid=c.insteadrepaytxnctrlid
+            left join ac_lms_db.LoanApplyInfo d
+            on c.exttxnid=d.id and c.scheduletype='RT'
+            left join
+            (
+                select a.applyinfoid ids,
+                case when  applystatus='O' and json_extract(txndata,'$.userCancelFlag')=TRUE then '用户终止结清'
+                     when  applystatus='O' and hasrepayamt<repayamt  then '中途失败结清'
+                     when  applystatus='O' then '全额结清'
+                     when  applystatus='C' and json_extract(txndata,'$.userCancelFlag')=TRUE then '用户终止撤销'
+                     when  applystatus='C' then '首笔失败撤销'
+                     when  hasrepayamt>0 and payedamt<hasrepayamt and applystatus<>'O'  then '逾期中'
+                     else  '其他' end  deal_status
+                from ac_bts_db.ApplyInfo a
+                left join ac_bts_db.InsteadRepayTxnCtrl b
+                on a.applyinfoid=b.applyinfoid
+            ) e
+            on e.ids=a.applyinfoid
+            left join ac_cif_db.Agreement f
+            on a.partyid=f.partyid
+            left join ac_cif_db.AcquireAgreement g
+            on f.id=g.id
+            where applytime<''' + today_s + '''  and  applytime>=''' + origin_day_s + '''
+            and g.agentPartyGrpId='1014816000774940'
+            group by date_format(applytime,'%Y-%m-%d')
+        ) xx
+        left join
+        (
+            select  date_format(exestarttime,'%Y-%m-%d') days,sum(a.amt) loanamt,
+            sum(case when TIMESTAMPDIFF(day,c.crttime,a.prestarttime)<=30 then a.amt end) new_loanamt, 
+            sum(case when TIMESTAMPDIFF(day,c.crttime,a.prestarttime)>30 then a.amt end) old_loanamt
+            from  ac_bts_db.InsteadRepaySchedule a
+            left join ac_bts_db.InsteadRepayTxnCtrl b
+            on a.insteadrepaytxnctrlid=b.insteadrepaytxnctrlid
+            left join ac_cif_db.Party c
+            on b.partyid=c.partyid
+            left join ac_cif_db.Agreement f
+            on b.partyid=f.partyid
+            left join ac_cif_db.AcquireAgreement g
+            on f.id=g.id
+            where scheduletype='RT' and a.status='S' and g.agentPartyGrpId='1014816000774940'
+            and a.prestarttime<''' + today_s + '''  and  a.prestarttime>=''' + origin_day_s + '''
+            group by date_format(exestarttime,'%Y-%m-%d')
+        ) yy
+        on xx.days=yy.days
+        left join
+        (
+            select  date_format(exestarttime,'%Y-%m-%d') days,sum(a.amt) backamt
+            from  ac_bts_db.InsteadRepaySchedule a
+            left join ac_bts_db.InsteadRepayTxnCtrl  b
+            on a.insteadrepaytxnctrlid=b.insteadrepaytxnctrlid
+            left join ac_cif_db.Agreement f
+            on b.partyid=f.partyid
+            left join ac_cif_db.AcquireAgreement g
+            on f.id=g.id
+            where scheduletype in ('PT','FT') and a.status='S' and g.agentPartyGrpId='1014816000774940'
+            and  exestarttime<''' + today_s + '''  and  exestarttime>=''' + origin_day_s + '''
+            group by date_format(exestarttime,'%Y-%m-%d')
+        ) zz 
+        on xx.days=zz.days
+        left join 
+        (
+            select date_format(a.crttime,'%Y-%m-%d') days,count(distinct a.partyid) register_count  
+            from ac_cif_db.Party a
+            left join ac_cif_db.Agreement f
+            on a.partyid=f.partyid
+            left join ac_cif_db.AcquireAgreement g
+            on f.id=g.id
+            where a.crttime<''' + today_s + '''  and  a.crttime>=''' + origin_day_s + '''
+            and g.agentPartyGrpId='1014816000774940'
+            group by date_format(crttime,'%Y-%m-%d')
+        ) uu
+        on xx.days=uu.days
+        '''
+
+    sql_1 = '''
+            select  date_format(x.ctime,'%Y-%m-%d'),count(distinct x.mcid),count(distinct x.cid)
+            from 
+            (
+            select   a.crttime ctime,b.merchantCustomerId mcid,c.cardno cid
+            from  ac_agw_db.AuthBindCard a
+            left join  ac_agw_db.MerchantUser b
+            on a.merchantUserId=b.merchantUserId
+            left join ac_agw_db.MerchantUserCard c
+            on a.merchantusercardid=c.merchantusercardid
+            left join ac_cif_db.Agreement f
+            on b.merchantcustomerid=f.partyid
+            left join ac_cif_db.AcquireAgreement g
+            on f.id=g.id
+            where a.authNetId like '08470010-00%'  and  a.status='1'  
+            and a.crttime>=''' + origin_day_s + ''' and a.crttime<''' + today_s + '''
+            and g.agentPartyGrpId='1014816000774940'
+            ) x
+            left join 
+            (
+            select  
+            distinct c.cardno cid
+            from  ac_agw_db.AuthBindCard a
+            left join  ac_agw_db.MerchantUser b
+            on a.merchantUserId=b.merchantUserId
+            left join ac_agw_db.MerchantUserCard c
+            on a.merchantusercardid=c.merchantusercardid
+            where a.authNetId like '08470010-00%'  and  a.status='1' 
+            ) y
+            on x.cid=y.cid
+            where y.cid is null
+            group by date_format(x.ctime,'%Y-%m-%d')
+            '''
+
+    def data_refresh():
+        try:
+            day_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db',
+                                                  max_size=-1)
+            card_row = sql_util.select_rows_by_sql(sql_text=sql_1, sql_paras={}, ns_server_id='/python/db/ac_agw_db',
+                                                   max_size=-1)
+        except:
+            return 'error'
+
+    x = 0
+    while x < 6:
+        if data_refresh() == 'error':
+            time.sleep(2)
+            data_refresh()
+            x = x + 1
+        else:
+            break
+
+    day_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db', max_size=-1)
+
+    day_list = []
+    for row in day_row:
+        day_list.append(list(row))
+
+    day_df = pd.DataFrame(day_list, columns=['register', 'day', 'apply_num', 'help_num', 'circle_num', 'usercancel_num',
+                                             'firstcancel_num', 'usersettle_num', 'midfailsettle_num',
+                                             'fullamountsettle_num', 'other_num', 'overdue_num', 'loan_amt',
+                                             'new_loanamt', 'old_loanamt', 'return_amt'])
+
+    # ---------------------------------------------------------
+
+
+    # today=datetime.date(datetime.today())
+    # origin_day=datetime.date(datetime.strptime('2017-12-21','%Y-%m-%d'))
+    # num=(today-origin_day).days
+
+    card_list = []
+    for i in range(-1, 60):
+        af_day = today - dt.timedelta(days=i)
+        bf_day = today - dt.timedelta(days=i + 1)
+
+        af_day_s = "'" + str(af_day) + "'"
+        bf_day_s = "'" + str(bf_day) + "'"
+
+        sql_1 = '''
+            select  date_format(x.ctime,'%Y-%m-%d'),count(distinct x.mcid),count(distinct x.cid)
+            from 
+            (
+            select   a.crttime ctime,b.merchantCustomerId mcid,c.cardno cid
+            from  ac_agw_db.AuthBindCard a
+            left join  ac_agw_db.MerchantUser b
+            on a.merchantUserId=b.merchantUserId
+            left join ac_agw_db.MerchantUserCard c
+            on a.merchantusercardid=c.merchantusercardid
+            left join ac_cif_db.Agreement f
+            on a.merchantUserId=f.partyid
+            left join ac_cif_db.AcquireAgreement g
+            on f.id=g.id
+            where a.authNetId like '08470010-00%'  and  a.status='1'
+            and a.crttime<''' + af_day_s + ''' and  a.crttime>=''' + bf_day_s + '''
+            and g.agentPartyGrpId='1014816000774940'
+            ) x
+            left join 
+            (
+            select  
+            distinct c.cardno cid
+            from  ac_agw_db.AuthBindCard a
+            left join  ac_agw_db.MerchantUser b
+            on a.merchantUserId=b.merchantUserId
+            left join ac_agw_db.MerchantUserCard c
+            on a.merchantusercardid=c.merchantusercardid
+            where a.authNetId like '08470010-00%'  and  a.status='1' 
+            and a.crttime<''' + bf_day_s + '''
+            ) y
+            on x.cid=y.cid
+            where y.cid is null
+            group by date_format(x.ctime,'%Y-%m-%d')
+            '''
+
+        card_row = sql_util.select_rows_by_sql(sql_text=sql_1, sql_paras={}, ns_server_id='/python/db/ac_agw_db',
+                                               max_size=-1)
+
+        for row in card_row:
+            card_list.append(list(row))
+
+    card_df = pd.DataFrame(card_list, columns=['day', 'person_num', 'card_num'])
+
+    xygj_df = pd.merge(card_df, day_df, on='day', how='right')
+    xygj_df = xygj_df.sort_values(by='day', ascending=[0])
+    days = xygj_df['day']
+    xygj_df = xygj_df.drop(['day'], axis=1)
+    xygj_df.insert(0, 'day', days)
+    print(xygj_df)
+    col = list(xygj_df.columns)
+    col.remove('day')
+    xygj_df.loc['row_sum'] = xygj_df[col].apply(lambda x: x.sum(), axis=0)
+    xygj_df.loc[xygj_df.index == 'row_sum', 'day'] = '总计'
+    pass_rate = xygj_df['help_num'] / xygj_df['apply_num']
+    xygj_df.insert(7, 'pass_rate', pass_rate)
+    xygj_df.columns = ['日期', '绑卡人数', '绑卡张数', '新增注册人数', '提交笔数', '垫付笔数', '循环笔数', '垫付占比', '用户终止撤销笔数',
+                       '首笔失败撤销笔数','用户终止结清笔数',
+                       '中途失败结清笔数', '全额结清笔数', '其他笔数', '逾期笔数', '放款金额', '新户放款额', '旧户放款额', '回款金额']
+
+    xygj_df = xygj_df.fillna(0)
+
+    usercancel_proportion = xygj_df['用户终止撤销笔数'] / xygj_df['提交笔数']
+    userfail_proportion = xygj_df['首笔失败撤销笔数'] / xygj_df['提交笔数']
+    partsettle_proportion = xygj_df['用户终止结清笔数'] / xygj_df['提交笔数']
+    midfailsettle_proportion = xygj_df['中途失败结清笔数'] / xygj_df['提交笔数']
+    allsettle_proportion = xygj_df['全额结清笔数'] / xygj_df['提交笔数']
+
+    xygj_df.insert(9, '用户终止撤销占比', usercancel_proportion)
+    xygj_df.insert(11, '首笔失败撤销占比', userfail_proportion)
+    xygj_df.insert(13, '用户终止结清占比', partsettle_proportion)
+    xygj_df.insert(15, '中途失败结清占比', midfailsettle_proportion)
+    xygj_df.insert(17, '全额结清占比', allsettle_proportion)
+
+    return xygj_df
+
+
 def excel_format(excel_writer, dataframe, sheet_name, col_wide=18,
                  freeze_row=1, freeze_col=1, format_dict={}):
     work_book = excel_writer.book
@@ -665,9 +920,10 @@ def email_task():
     funnel_df=get_funneldata()
     repay_df=get_checkdetail()
     fail_df=get_failreason()
+    xygj_df=get_xygjdata()
 
 
-    name_list = ['业务概览', '垫付交易表', '循环交易表', '贷后日报表', '帮还每日漏斗', '通过详情', '失败原因统计']
+    name_list = ['业务概览', '垫付交易表', '循环交易表', '贷后日报表', '帮还每日漏斗', '通过详情', '失败原因统计','信用管家']
     format1 = {'format_1': ['A:G', 'I:I', 'K:K', 'M:M', 'O:O', 'Q:Q', 'S:Z'],
                'format_2': ['H:H', 'J:J', 'L:L', 'N:N', 'P:P', 'R:R']}
     format2 = {'format_2': ['D:D', 'F:F', 'H:H', 'J:J', 'L:L'], 'format_1': ['A:C', 'E:E', 'G:G', 'I:I', 'K:K', 'M:Z']}
@@ -676,8 +932,8 @@ def email_task():
     format5 = {'format_1': ['A:C', 'F:Z'], 'format_2': ['D:E']}
     format6 = {'format_1': ['A:Z']}
     format7 = {'format_1': ['A:Z']}
-    format_list = [format1, format2, format3, format4, format5, format6, format7]
-    df_list = [end_day_df, help_df, circle_df, afterloan_df, funnel_df, repay_df, fail_df]
+    format_list = [format1, format2, format3, format4, format5, format6, format7,format1]
+    df_list = [end_day_df, help_df, circle_df, afterloan_df, funnel_df, repay_df, fail_df,xygj_df]
 
     excel_writer = pd.ExcelWriter('/home/andpay/data/excel/helprepay_report.xlsx', engine='xlsxwriter')
     for sheet_name, format, df in zip(name_list, format_list, df_list):

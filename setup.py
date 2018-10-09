@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 
+
 setup(name='get-user-info',
       version='1.0.0',
       description='Event Data Analyse project.',
