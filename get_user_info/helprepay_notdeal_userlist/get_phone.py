@@ -90,7 +90,7 @@ def data_merge(user_df):
 
 def email_task():
     path = os.path.dirname(__file__)
-    path=path+'/partyid_list200.xlsx'
+    #path=path+
 
     nodeal_df=pd.read_excel(path)
     res_df = data_merge(nodeal_df)
