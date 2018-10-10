@@ -1,0 +1,3 @@
+from  get_user_info.email_task.loan_tuesday_report  import  email_send
+
+email_send()
