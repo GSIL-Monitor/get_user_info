@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611be7e2-db84-4523-8edf-f5ca03c2b615" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bin/loan-thurday-report" afterPath="$PROJECT_DIR$/bin/loan-thursday-report" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" afterPath="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loan_daily_report.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loan_daily_report.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="888" column="53" lean-forward="false" selection-start-line="888" selection-start-column="53" selection-end-line="888" selection-end-column="53" />
+            <state relative-caret-position="232">
+              <caret line="1243" column="61" lean-forward="true" selection-start-line="1243" selection-start-column="61" selection-end-line="1243" selection-end-column="61" />
               <folding>
                 <element signature="e#37#84#0" expanded="true" />
               </folding>
@@ -51,63 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loan-tuesday-report" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/loan-tuesday-report">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loan-thursday-report" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/loan-thursday-report">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loan_thursday_report.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_thursday_report.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="646" column="0" lean-forward="false" selection-start-line="646" selection-start-column="0" selection-end-line="646" selection-end-column="0" />
-              <folding>
-                <element signature="e#36#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loan_tuesday_report.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_tuesday_report.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loan-daily-report" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/loan-daily-report">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="345">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -175,24 +123,24 @@
         <option value="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_userlist.py" />
         <option value="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_noapply_userphone.py" />
         <option value="$PROJECT_DIR$/bin/loan-daily-report.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/bin/loan-daily-report" />
         <option value="$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_phone.py" />
         <option value="$PROJECT_DIR$/get_user_info/email_task/loan_tuesday_report.py" />
         <option value="$PROJECT_DIR$/get_user_info/email_task/loan_thurday_report.py" />
         <option value="$PROJECT_DIR$/get_user_info/email_task/loan_thursday_report.py" />
-        <option value="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" />
         <option value="$PROJECT_DIR$/bin/loan-thurday-report" />
         <option value="$PROJECT_DIR$/bin/loan-thursday-report" />
         <option value="$PROJECT_DIR$/bin/loan-tuesday-report" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="230" />
-    <option name="y" value="55" />
+    <option name="x" value="275" />
+    <option name="y" value="75" />
     <option name="width" value="1490" />
-    <option name="height" value="940" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -516,13 +464,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="230" y="55" width="1490" height="940" extended-state="1" />
+    <frame x="275" y="75" width="1490" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26864642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296837" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3053528" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33069828" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38603425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296837" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -866,14 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST.in">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -916,18 +856,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/loan-daily-report">
+    <entry file="file://$PROJECT_DIR$/bin/loan-thursday-report">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_tuesday_report.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -942,21 +874,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py">
+    <entry file="file://$PROJECT_DIR$/bin/loan-daily-report">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="888" column="53" lean-forward="false" selection-start-line="888" selection-start-column="53" selection-end-line="888" selection-end-column="53" />
-          <folding>
-            <element signature="e#37#84#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/loan-thursday-report">
+    <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_tuesday_report.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="-9641">
+          <caret line="60" column="25" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="e#37#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -965,6 +897,24 @@
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="1243" column="61" lean-forward="true" selection-start-line="1243" selection-start-column="61" selection-end-line="1243" selection-end-column="61" />
+          <folding>
+            <element signature="e#37#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
