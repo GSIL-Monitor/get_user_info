@@ -1154,28 +1154,28 @@ def email_send():
     format_2 = work_book.add_format({'align': 'center', 'num_format': '0.00%', 'font_name': '微软雅黑'})
     format_3 = work_book.add_format({'align': 'center', 'num_format': '0.0000%', 'font_name': '微软雅黑'})
 
-    first_df = get_first_df()
-    first_df.to_excel(excel_writer, '业务日报表', index=False)
-    first_sheet = excel_writer.sheets['业务日报表']
-    first_sheet.set_column('A:Z', 16, format_1)
-    first_sheet.set_column('D:D', 16, format_2)
-    first_sheet.set_column('F:F', 16, format_2)
-    first_sheet.freeze_panes(1, 1)
-
-    loan_after_df = get_loan_after_df()
-    loan_after_df.to_excel(excel_writer, '贷后日报表', index=False)
-    loan_sheet = excel_writer.sheets['贷后日报表']
-    loan_sheet.set_column('A:AD', 16, format_1)
-    loan_sheet.set_column('AD:AD', 16, format_3)
-    loan_sheet.freeze_panes(1, 1)
-
-    end_audit_df = get_end_audit_df()
-    end_audit_df.to_excel(excel_writer, '审批日报表', index=False)
-    end_audit_sheet = excel_writer.sheets['审批日报表']
-    end_audit_sheet.set_column('A:Z', 16, format_1)
-    end_audit_sheet.set_column('E:E', 16, format_2)
-    end_audit_sheet.set_column('H:H', 16, format_2)
-    end_audit_sheet.freeze_panes(1, 1)
+    # first_df = get_first_df()
+    # first_df.to_excel(excel_writer, '业务日报表', index=False)
+    # first_sheet = excel_writer.sheets['业务日报表']
+    # first_sheet.set_column('A:Z', 16, format_1)
+    # first_sheet.set_column('D:D', 16, format_2)
+    # first_sheet.set_column('F:F', 16, format_2)
+    # first_sheet.freeze_panes(1, 1)
+    #
+    # loan_after_df = get_loan_after_df()
+    # loan_after_df.to_excel(excel_writer, '贷后日报表', index=False)
+    # loan_sheet = excel_writer.sheets['贷后日报表']
+    # loan_sheet.set_column('A:AD', 16, format_1)
+    # loan_sheet.set_column('AD:AD', 16, format_3)
+    # loan_sheet.freeze_panes(1, 1)
+    #
+    # end_audit_df = get_end_audit_df()
+    # end_audit_df.to_excel(excel_writer, '审批日报表', index=False)
+    # end_audit_sheet = excel_writer.sheets['审批日报表']
+    # end_audit_sheet.set_column('A:Z', 16, format_1)
+    # end_audit_sheet.set_column('E:E', 16, format_2)
+    # end_audit_sheet.set_column('H:H', 16, format_2)
+    # end_audit_sheet.freeze_panes(1, 1)
 
     end_user_categroy_df = get_end_user_categroy_df()
     end_user_categroy_df.to_excel(excel_writer, '新老户数据', index=False)

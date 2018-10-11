@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611be7e2-db84-4523-8edf-f5ca03c2b615" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" afterPath="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +41,8 @@
       <file leaf-file-name="loan_daily_report.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="684" column="63" lean-forward="true" selection-start-line="684" selection-start-column="63" selection-end-line="684" selection-end-column="63" />
+            <state relative-caret-position="-40">
+              <caret line="1156" column="0" lean-forward="false" selection-start-line="1156" selection-start-column="0" selection-end-line="1178" selection-end-column="0" />
               <folding>
                 <element signature="e#37#84#0" expanded="true" />
               </folding>
@@ -940,8 +939,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="684" column="63" lean-forward="true" selection-start-line="684" selection-start-column="63" selection-end-line="684" selection-end-column="63" />
+        <state relative-caret-position="-40">
+          <caret line="1156" column="0" lean-forward="false" selection-start-line="1156" selection-start-column="0" selection-end-line="1178" selection-end-column="0" />
           <folding>
             <element signature="e#37#84#0" expanded="true" />
           </folding>
