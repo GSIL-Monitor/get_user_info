@@ -139,7 +139,7 @@ def get_creditrate_df():
 
     ytd_s = "'" + str(today) + "'"
     ord_s = "'" + str(origin_date) + "'"
-    print(ytd_s, ord_s)
+
 
     sql = '''
     select     
@@ -611,7 +611,7 @@ def get_repay_df():
             on xx.days=zz.days
             '''
 
-        day_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_bts_db',
+        day_row = sql_util.select_rows_by_sql(sql_text=sql, sql_paras={}, ns_server_id='/python/db/ac_cif_db',
                                               max_size=-1)
 
         for row in day_row:
