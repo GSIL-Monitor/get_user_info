@@ -685,11 +685,11 @@ def get_end_user_categroy_df():
     loan_df = pd.merge(loan_df, nowloan_table, on='day', how='outer')
     print(loan_df.head())
 
-    loan_df.columns = ['日期', 'rq', 'rq1', '新户放款金额', '旧户放款金额', '新户放款笔数', '旧户放款笔数', '新户贷款余额', '旧户贷款余额', '总余额', '新户在贷人数',
+    loan_df.columns = ['日期', 'rq',  '新户放款金额', '旧户放款金额', '新户放款笔数', '旧户放款笔数', '新户贷款余额', '旧户贷款余额', '总余额', '新户在贷人数',
                        '旧户在贷人数',
                        '在贷总人数', '新户在贷笔数', '旧户在贷人笔数', '在贷总笔数']
 
-    loan_df = loan_df.drop(['rq', 'rq1'], axis=1)
+    loan_df = loan_df.drop(['rq'], axis=1)
 
     print(loan_df.head())
     column_name = ['日期', '新户放款笔数', '旧户放款笔数', '新户放款金额', '旧户放款金额', '新户贷款余额', '旧户贷款余额', '总余额', '新户在贷人数', '旧户在贷人数',
