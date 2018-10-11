@@ -712,7 +712,7 @@ def get_way_df():
             fail_list.append([string] + list(row))
 
     week_way_df = pd.DataFrame(week_list, columns=['day', 'channel', 'cate', 'successnum', 'successamt'])
-    week_way_df[['successnum', 'successamt']] = week_way_df[['successnum', 'successamt']].apply(pd.to_numeric)
+    week_way_df[['successnum', 'successamt']] = week_way_df[['successnum', 'successamt']].astype(int)
     week_way_df = pd.pivot_table(week_way_df, index='day', columns=['cate', 'channel'],
                                  values=['successnum', 'successamt']).reset_index()
 
