@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611be7e2-db84-4523-8edf-f5ca03c2b615" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/email_task/loan_tuesday_report.py" afterPath="$PROJECT_DIR$/get_user_info/email_task/loan_tuesday_report.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" afterPath="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,13 +14,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="get_noapply_userphone.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_noapply_userphone.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_noapply_userphone.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="143" column="16" lean-forward="true" selection-start-line="143" selection-start-column="16" selection-end-line="143" selection-end-column="16" />
+            <state relative-caret-position="127">
+              <caret line="169" column="29" lean-forward="false" selection-start-line="169" selection-start-column="29" selection-end-line="169" selection-end-column="29" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loan_daily_report.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="1245" column="0" lean-forward="true" selection-start-line="1245" selection-start-column="0" selection-end-line="1245" selection-end-column="0" />
+              <folding>
+                <element signature="e#37#84#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,17 +115,17 @@
         <option value="$PROJECT_DIR$/get_user_info/email_task/loan_thurday_report.py" />
         <option value="$PROJECT_DIR$/bin/loan-thurday-report" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" />
         <option value="$PROJECT_DIR$/bin/loan-tuesday-report" />
         <option value="$PROJECT_DIR$/bin/loan-thursday-report" />
         <option value="$PROJECT_DIR$/get_user_info/email_task/loan_thursday_report.py" />
         <option value="$PROJECT_DIR$/get_user_info/email_task/loan_tuesday_report.py" />
+        <option value="$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="335" />
-    <option name="y" value="221" />
+    <option name="x" value="267" />
+    <option name="y" value="134" />
     <option name="width" value="1490" />
     <option name="height" value="877" />
   </component>
@@ -439,7 +451,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="335" y="221" width="1490" height="877" extended-state="1" />
+    <frame x="267" y="134" width="1490" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26864642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -819,16 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18420">
-          <caret line="1228" column="44" lean-forward="true" selection-start-line="1228" selection-start-column="44" selection-end-line="1228" selection-end-column="44" />
-          <folding>
-            <element signature="e#37#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/data_merge/data_output.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="853">
@@ -885,10 +887,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_user_info/helprepay_notdeal_userlist/get_noapply_userphone.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="143" column="16" lean-forward="true" selection-start-line="143" selection-start-column="16" selection-end-line="143" selection-end-column="16" />
+        <state relative-caret-position="127">
+          <caret line="169" column="29" lean-forward="false" selection-start-line="169" selection-start-column="29" selection-end-line="169" selection-end-column="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_user_info/email_task/loan_daily_report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="1245" column="0" lean-forward="true" selection-start-line="1245" selection-start-column="0" selection-end-line="1245" selection-end-column="0" />
+          <folding>
+            <element signature="e#37#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
