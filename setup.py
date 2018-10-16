@@ -15,7 +15,7 @@ setup(name='get-user-info',
       tests_require=['nose'],
       scripts=['bin/get-user-info','bin/get-relative-phone','bin/get-reportid','bin/get-helprepay-nodeal-userlist',
                'bin/helprepay-rulehit-task','bin/helprepay-daily-task','bin/loan-daily-report','bin/loan-tuesday-report',
-               'bin/loan-thursday-report',],
+               'bin/loan-thursday-report','bin/loan-customerservice-dailyreport',],
       entry_points={
           'console_scripts': [],
       },
