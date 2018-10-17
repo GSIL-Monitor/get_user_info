@@ -11,7 +11,7 @@ import numpy as np
 from datetime import datetime
 import datetime as dt
 from get_user_info.data_merge.send_email import EmailSend
-import os
+
 
 init_ti_srv_cfg('ti-daf')
 db_1 = SqlContext('/python/db/dev_dw_db')
