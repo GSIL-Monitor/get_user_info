@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # encoding=utf-8
 
-
 from ti_config.bootstrap import init_ti_srv_cfg
 from ti_daf.sql_context import SqlContext, session_scope, iselect_rows_by_sql
 from ti_daf import SqlTemplate,sql_util
@@ -83,7 +82,7 @@ def get_first_df():
             on a.id=b.idloanagreement 
             left join dev_dw.f_loanapplyinfo c
             on a.applyid=c.applyno
-            where (b.repaytime is null or  b.repaytime-1>to_date(''' + time + ''','yyyy-mm-dd'))  and a.loantime-1<to_date(''' + time + ''','yyyy-mm-dd')
+            where (b.repaytime is null  or  b.repaytime-1>to_date(''' + time + ''','yyyy-mm-dd'))  and a.loantime-1<to_date(''' + time + ''','yyyy-mm-dd')
             and (to_date(''' + time + ''','yyyy-mm-dd')-b.duedate<33 or (b.repaytime is null and to_date(''' + time + ''','yyyy-mm-dd')-b.duedate<33))
             and b.idproduct<>21 and a.loanstatus in ('D','O','R','E')
             '''
